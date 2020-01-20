@@ -70,8 +70,8 @@ h2 {
   // border: 2px solid black;
   width: 100%;
   background-color: rgba(23,103,100,0.1);
-  padding: 70px 0px 70px 0px;
-    margin-top: 120px;
+  padding: 120px 0px 120px 0px;
+    // margin-top: 120px;
 }
 
 .container-services .container-categories h1 {
@@ -80,7 +80,7 @@ h2 {
 }
 
 .container-logo {
-  height: 84vh;
+  height: 88vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -116,13 +116,14 @@ h2 {
   // font-family: 'Strait', sans-serif;
 }
 
-.containter-clients-input {
-  padding: 70px 0px 70px 0px;
-  margin-top: 120px;
-    border: 2px solid black;
+.container-clients-input {
+  // margin-top: 120px;
+  padding-top: 120px;
+  // border: 2px solid black;
 }
 
 #clients h1 {
   font-size: 60px;
   font-family: 'Strait', sans-serif;
+
 }
