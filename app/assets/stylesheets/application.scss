@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* Graphical variables */
+@import "config/_fonts";
+@import "config/_colors";
+@import "config/_bootstrap_variables";
+
+/* External libraries */
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*// Your CSS partials */
+@import "webapp";
+@import "components/_alert";
+@import "components/_avatar";
+@import "components/_button";
+@import "components/_card";
+@import "components/_containers";
+@import "components/_footer";
+@import "components/_form";
+@import "components/_icon";
+@import "components/_layout";
+@import "components/_navbar";
+

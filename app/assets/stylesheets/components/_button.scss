@@ -1,0 +1,57 @@
+.btn-ghost {
+  color: #176764;
+  border: 3px solid #176764;
+  padding: 12px 24px;
+  margin-right: 20px;
+  margin-top: -14px;
+  border-radius: 50px;
+  font-weight: bolder;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-family: 'Strait', sans-serif;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #f5e1da;
+  border: 3px solid #f5e1da;
+}
+
+.btn-ghost-card {
+  color: #176764;
+  border: 3px solid #176764;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bolder;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  margin-top: -25px;
+  font-family: 'Strait', sans-serif;
+  font-size: 18px;
+}
+
+.btn-ghost-card:hover {
+  opacity: 1;
+  color: #f5e1da;
+  border: 3px solid #f5e1da;
+}
+
+.btn-ghost-form {
+  color: #176764;
+  border: 3px solid #176764;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bolder;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin-top: 5px;
+  background-color:#f5e1da;
+  font-family: 'Strait', sans-serif;
+    font-size: 18px;
+}
+
+.btn-ghost-form:hover {
+  opacity: 1;
+  color: #176764;
+  border: 3px solid #176764;
+}
