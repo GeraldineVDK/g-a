@@ -1,10 +1,9 @@
 <div class="navbar">
   <div class="sort-navbar">
     <div class="menu">
-      <a class="navbar-brand" href="/">
-        <!-- <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /> -->
-        <%= image_tag("logosample.jpg", :alt => "logosample feed", class: "avatar") %>
-      </a>
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag("logosample.jpg", :alt => "logosample feed", class: "avatar")  %>
+      <% end %>
       <ul class="navbar-nav">
 <!--         <li class="nav-item">
           <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
