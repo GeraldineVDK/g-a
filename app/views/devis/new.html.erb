@@ -1,0 +1,69 @@
+<div class="container-all" id="id-container-all">
+  <%= render 'shared/navbar' %>
+  <div class="card-form">
+    <h1>Demande de Devis</h1>
+    <div class="card-inner">
+      <div class="form d-flex">
+        <%= simple_form_for Devi.new do |f| %>
+          <div class="card-info-prestations">
+            Prénom:<br>
+            <%= f.input :first_name, label: 'Prénom', label: false, error: 'Champ obligatoire, merci de compléter' %>
+          </div>
+          <div class="card-info-prestations">
+            Nom:<br>
+            <%= f.input :last_name, label: 'Nom', label: false, error: 'Champ obligatoire, merci de compléter'  %>
+          </div>
+          <div class="card-info-prestations">
+            Téléphone:<br>
+            <%= f.input :telephone, label: 'Téléphone', label: false, error: 'Champ obligatoire, merci de compléter'  %>
+          </div>
+          <div class="card-info-prestations">
+            Email:<br>
+            <%= f.input :email, label: 'Email', label: false, error: 'Champ obligatoire, merci de compléter'  %>
+          </div>
+          <div class="card-info-prestations">
+            Service sélectionné<br>
+            <%= f.input :service_demande, label: 'Service sélectionné', label: false, error: 'Champ obligatoire, merci de compléter', collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %>
+          </div>
+          <div class="card-info-prestations">
+            Addresse de la prestation:<br>
+            <%= f.input :building_address, label: 'Addresse de la prestation', label: false%>
+          </div>
+          <!-- <div class="card-info-prestations">
+            Nombre de passages souhaités par semaine?<br>
+            <%= f.input :nr_de_passages, label: 'Nombre de passages souhaités par semaine?', label: false, collection: 1..5  %>
+          </div> -->
+          <div class="card-info-prestations">
+            Nombre d'heures souhaitées par semaine?<br>
+            <%= f.input :nr_d_heures, label: "Nombre d'heures souhaitées par semaine?", label: false, collection: 1..20   %>
+          </div>
+          <div class="card-info-prestations">
+            Avez-vous un cahier des charges?<br>
+            <%= f.input :cahier_de_charges, label: 'Avez-vous un cahier des charges?', label: false, as: :radio_buttons  %>
+          </div>
+         <!--  <div class="card-info-prestations">
+            Date souhaitée pour un rendez-vous?<br>
+            <%= f.input :date_rdv, label: 'Date souhaitée pour un rendez-vous?', label: false%>
+          </div> -->
+          <div class="card-info-prestations">
+            Date souhaitée pour le début du service?<br>
+            <%= f.input :date_debut_souhaitee, label: 'Date souhaitée pour le début du service?', label: false%>
+          </div>
+          <div class="card-info-prestations">
+            <%= f.button :submit, 'Soumettre la demande', class: "btn-ghost-form"%>
+          </div>
+        <% end %>
+      </div>
+      <div class="g-a-contact">
+        <%= image_tag("logosample.jpg", :alt => "logosample feed", class: "avatar-medium") %>
+        <h2>G&A Cleaning Pro Services</h2>
+        <p>Nr de TVA: 0717771789</p>
+        <p>55, Terkluizendreef</p>
+        <p>1640 Sint-Genesius-Rode</p>
+        <p>0485/13.03.38</p>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>
+

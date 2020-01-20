@@ -1,0 +1,35 @@
+
+.avatar {
+  width: 80px;
+  border-radius: 50%;
+  // border: 3px solid #f5e1da;
+  margin-left: 10px;
+  margin-top: 18px;
+  position: absolute;
+  // background: image-url('tree.jpg') no-repeat center center fixed;
+}
+
+.avatar:hover {
+  box-shadow: 2px 2px 8px  #49beb7;
+}
+
+.avatar-large {
+  width: 500px;
+  border-radius: 50%;
+  // border: 3px solid #f5e1da;
+  // position: absolute;
+  top: 50px;
+  box-shadow: 4px 4px 16px #043234;
+  // left: 750px;
+  // background: image-url('logosample.png')
+}
+
+.avatar-medium {
+  width: 150px;
+  border-radius: 50%;
+  // border: 3px solid #f5e1da;
+  position: absolute;
+  top: -75px;
+  left: 125px;
+  // background: image-url('tree.jpg') no-repeat center center fixed;
+}

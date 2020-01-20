@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  telephone: MyString
+  email: MyString
+  building_address: MyString
+  nr_de_passages: 1
+  nr_d_heures: 1
+  cahier_de_charges: false
+  service_demande: MyString
+  date_rdv: 2020-01-20
+  date_debut_souhaitee: 2020-01-20
+
+two:
+  first_name: MyString
+  last_name: MyString
+  telephone: MyString
+  email: MyString
+  building_address: MyString
+  nr_de_passages: 1
+  nr_d_heures: 1
+  cahier_de_charges: false
+  service_demande: MyString
+  date_rdv: 2020-01-20
+  date_debut_souhaitee: 2020-01-20
