@@ -1,23 +1,26 @@
-<div class="navbar">
+<div class="navbar" id="navbar">
   <div class="sort-navbar d-flex justify-content-between align-items-center">
     <!-- <div class="menu"> -->
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag("logosample.jpg", :alt => "logosample feed", class: "avatar")  %>
     <% end %>
-    <ul class="navbar-nav">
-<!--         <li class="nav-item">
-          <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-        </li> -->
-      <li class="nav-item d-flex">
-        <a class="nav-link" href="/#who">Qui sommes-nous?</a>
-        <a class="nav-link" href="/#services">Nos services</a>
-        <a class="nav-link" href="/#clients">L'Expérience Client</a>
-        <a class="nav-link" href="/contacts">Nous contacter</a>
+    <ul class="navbar-nav d-flex justify-content-end flex-row">
+      <li class="nav-item d-flex align-items-center">
+        <%= link_to "Qui sommes-nous?", '/#who', class: "nav-item" %>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <%= link_to "Nos services", '/#services', class: "nav-item" %>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <%= link_to "L'Expérience Client", '/#clients', class: "nav-item" %>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <%= link_to "Nous contacter", contacts_path, class: "nav-item" %>
+      </li>
+      <li class="nav-item d-flex align-items-center">
+        <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost" %>
       </li>
     </ul>
-   <!--  </div> -->
-        <!-- <li class="nav-item"> <-->
-    <button class="btn btn-ghost" onclick="location.href='devis'">Devis Gratuit</button>
-<!--         </li> -->
+
   </div>
 </div>

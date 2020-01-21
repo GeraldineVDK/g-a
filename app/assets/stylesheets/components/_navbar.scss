@@ -1,59 +1,39 @@
 .navbar {
   justify-content: space-between;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   background: #176764;
   height: 120px;
-  // position: relative;
   top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+#navbar {
+  top: 0;
+  width: 100%;
   position: sticky;
 }
 
 .nav-item {
-  display: inline-block;
-}
-
-.nav-item li {
-  display: inline-block;
   padding-right: 10px;
-}
-
-li a {
   color: #f5e1da;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Strait', sans-serif;
-  // padding-right: 20px;
-  // margin-top: -20px;
   &:hover {
     text-shadow: 2px 2px 8px  #49beb7;
     color: #f5e1da;
+    text-decoration: none;
   }
-}
-
-button {
-  color: #f5e1da;
-  font-size: 22px;
-  font-weight: bold;
-  // text-decoration: none;
-  font-family: 'Strait', sans-serif;
-  position: absolute;
-  right: 20px;
-  // top: 50px;
 }
 
 .navbar ul {
   padding: 40px 10px;
   position: absolute;
+  right: 20px;
   margin-left: 90px;
+  display: inline-block;
 }
 
-.navbar-nav .nav-link li a {
-  // padding: 10px 10px;
-  padding-left: 10px;
-  // margin-top: -45px;
-}
 
-// .menu {
-//   position:relative;
-// }
