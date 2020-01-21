@@ -38,6 +38,24 @@ h2 {
   margin: 10px;
 }
 
+.service-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-details h1 {
+  color: #f5e1da;
+  font-size: 26px;
+  padding: 10px;
+}
+
+.service-details p {
+  color: #f5e1da;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .container-who-we-are {
   // border: 2px solid black;
   margin-top: 120px;
@@ -53,14 +71,7 @@ h2 {
 .container-who-we-are-details {
   display:flex;
     // padding: 40px;
-
 }
-
-// .container-who-we-are-details img {
-//   width: 300px;
-//   height: 300px;
-//   padding: 20px;
-// }
 
 .container-who-we-are-details-text p {
   padding: 20px;
@@ -70,8 +81,8 @@ h2 {
   // border: 2px solid black;
   width: 100%;
   background-color: rgba(23,103,100,0.1);
-  padding: 70px 0px 70px 0px;
-    margin-top: 120px;
+  padding: 120px 0px 120px 0px;
+    // margin-top: 120px;
 }
 
 .container-services .container-categories h1 {
@@ -80,7 +91,7 @@ h2 {
 }
 
 .container-logo {
-  height: 84vh;
+  height: 88vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -116,13 +127,14 @@ h2 {
   // font-family: 'Strait', sans-serif;
 }
 
-.containter-clients-input {
-  padding: 70px 0px 70px 0px;
-  margin-top: 120px;
-    border: 2px solid black;
+.container-clients-input {
+  // margin-top: 120px;
+  padding-top: 120px;
+  // border: 2px solid black;
 }
 
 #clients h1 {
   font-size: 60px;
   font-family: 'Strait', sans-serif;
+
 }

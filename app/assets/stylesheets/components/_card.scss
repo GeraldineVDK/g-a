@@ -6,10 +6,6 @@
   margin: 20px;
   width: 500px;
   height: 400px;
-  // position: relative;
-  // & :hover {
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // }
 }
 
 .card-service-front > img {
@@ -32,20 +28,6 @@
 .service-details {
   margin-top: 70px;
 }
-
-// .card-service h2 {
-//   font-size: 16px;
-//   font-weight: bold;
-//   margin: 0;
-//   color: #176764;
-// }
-
-// .card-service-infos p {
-//   font-size: 16px;
-//   opacity: .7;
-//   margin: 0;
-// }
-
 
 .card-service .card-service-infos {
   padding: 16px;
@@ -73,12 +55,6 @@
 
 
 ////FLIP CARDS////
-// .card-service {
-//   background-color: transparent;
-//   width: 300px;
-//   height: 300px;
-  // perspective: 1000px;
-// }
 
 .card-service-inner {
   position: relative;
@@ -129,12 +105,12 @@
 .card-form {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 40px;
+  padding: 10px;
   width: 900px;
-  justify-content: center;
+  justify-content: space-between;
   margin: 50px auto;
   float: none;
-  // border: 2px solid orange;
+  border: 2px solid orange;
   border-radius: 10px;
 }
 
@@ -149,7 +125,7 @@
 }
 
 .form {
-  // border: 2px solid blue;
+  border: 2px solid blue;
   width: 400px;
   padding: 10px;
   margin: 10px;
@@ -157,7 +133,7 @@
 
 .g-a-contact {
   width: 400px;
-  // border: 2px solid green;
+  border: 2px solid green;
   padding:10px;
   // margin: 10px;
   height: 300px;
@@ -177,13 +153,15 @@
 .g-a-contact p {
   text-align: center;
   font-size: 20px;
+  line-height: 1;
 }
 
 .card-inner {
   // border: 2px solid black;
-  padding: 10px;
+  // padding: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .card-input {
@@ -204,9 +182,9 @@
   width: 100%;
   background-color: rgba(23,103,100,0.1);
   // color: #f5e1da;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  // position: -webkit-sticky;
+  // position: sticky;
+  // top: 0px;
   // padding: 10px;
   height: 80px;
 }
@@ -219,8 +197,12 @@
   // display:flex;
   // border: 2px solid blue;
   padding-right: 40px;
-  padding-top: 30px;
+  // padding-top: 30px;
 
+}
+
+.rating-card i {
+  font-size: 25px;
 }
 
 .comment-card {

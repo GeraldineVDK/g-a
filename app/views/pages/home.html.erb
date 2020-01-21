@@ -46,14 +46,10 @@
               <h1>Bureaux & Locaux Professionnels</h1>
             </div>
             <div class="card-service-back">
-              <div class="card-service-infos">
-                <div>
-                  <button class="btn btn-ghost-card" onclick="location.href='devis'">Devis Gratuit</button>
-                  <div class="service-details">
-                    <h1>Bureaux & Locaux Professionnels</h1>
-                    <p>G&A vous propose un nettoyage régulier ou ponctuel d’espace de travail. Presentez-nous vos besoins et nous pourrons définir ensemble un service à la carte qui convient le mieux à votre activité professionnelle.</p>
-                  </div>
-                </div>
+              <div class="service-details">
+                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                <h1>Bureaux & Locaux Professionnels</h1>
+                <p>G&A vous propose un nettoyage régulier ou ponctuel d’espace de travail. Presentez-nous vos besoins et nous pourrons définir ensemble un service à la carte qui convient le mieux à votre activité professionnelle.</p>
               </div>
             </div>
           </div>
@@ -65,14 +61,10 @@
               <h1>Copropriétés & Espaces Communs</h1>
             </div>
             <div class="card-service-back">
-              <div class="card-service-infos">
-                <div>
-                  <button class="btn btn-ghost-card" onclick="location.href='devis'">Devis Gratuit</button>
-                  <div class="service-details">
-                    <h1>Copropriétés & Espaces Communs</h1>
-                    <p>G&A vous propose un service discret, rapide et efficace pour vous aider à entretenir copropriétés et espaces communs d'immeubles de logement.</p>
-                  </div>
-                </div>
+              <div class="service-details">
+                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                <h1>Copropriétés & Espaces Communs</h1>
+                <p>G&A vous propose un service discret, rapide et efficace pour vous aider à entretenir copropriétés et espaces communs d'immeubles de logement.</p>
               </div>
             </div>
           </div>
@@ -84,14 +76,10 @@
               <h1>Interventions Spécialisées</h1>
             </div>
             <div class="card-service-back">
-              <div class="card-service-infos">
-                <div>
-                  <button class="btn btn-ghost-card" onclick="location.href='devis'">Devis Gratuit</button>
-                  <div class="service-details">
-                    <h1>Interventions Spécialisées</h1>
-                    <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en états? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
-                  </div>
-                </div>
+              <div class="service-details">
+                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                <h1>Interventions Spécialisées</h1>
+                <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en états? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
               </div>
             </div>
           </div>
@@ -103,14 +91,10 @@
               <h1>Entretien Espaces Verts</h1>
             </div>
             <div class="card-service-back">
-              <div class="card-service-infos">
-                <div>
-                  <button class="btn btn-ghost-card" onclick="location.href='devis'">Devis Gratuit</button>
-                  <div class="service-details">
-                    <h1>Entretien Espaces Verts</h1>
-                    <p>Vous souhaitez entretenir un espace vert dans votre copropriété ou lieu de travail, mais n'avez pas le temps ou le materiel adéquat? G&A peut s'en charger!</p>
-                  </div>
-                </div>
+              <div class="service-details">
+                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                <h1>Entretien Espaces Verts</h1>
+                <p>Vous souhaitez entretenir un espace vert dans votre copropriété ou lieu de travail, mais n'avez pas le temps ou le materiel adéquat? G&A peut s'en charger!</p>
               </div>
             </div>
           </div>
@@ -119,9 +103,9 @@
   </div>
 
   <div class="container-clients-input" id='clients'>
-    <h1>Nos clients vous diront que...</h1>
+    <h1>L'Expérience Client</h1>
     <div class="card-input">
-      <div class="top-card">
+      <div class="top-card d-flex align-items-center">
         <h2>Travaux de rafraîchissement et nettoyage</h2>
         <div class="rating-card d-flex align-items-center">
           <span class="fa fa-star checked"></span>
@@ -143,26 +127,26 @@
       </div>
     </div>
     <div class="card-input">
-      <div class="top-card">
-        <h2>Titre de commentaire</h2>
+      <div class="top-card  d-flex align-items-center">
+        <h2>Nettoyage de Copropriété</h2>
         <div class="rating-card d-flex align-items-center">
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star not-checked"></span>
+          <span class="fa fa-star checked"></span>
         </div>
       </div>
       <div class="comment-card flex-grow">
-        <p>Lorem ipsum dolor sit amet, ut vix regione albucius torquatos, dolor nonumy id sed.
-        Dico soluta argumentum eu vel, eu quis postea vix. Malis suscipiantur per an, sea eu suas
-        utroque vituperatoribus, quo altera numquam an. Duo case conceptam ne, vis hinc feugiat molestie te.
+        <p>G&A s'occupe de l'entretien courant du bâtiment où j'habite en tant que locataire.
+          Il n'y a jamais eu de problèmes. Le personnel est très gentil, poli, ainsi qu'efficient et professionnel.
+          C'est aussi beaucoup moins cher que ce que je payais avant.
         </p>
-        <cite>- The Scream, Syndic</cite>
+        <cite>-Mlle Impellizzeri, Locataire</cite>
       </div>
     </div>
     <div class="card-input">
-      <div class="top-card">
+      <div class="top-card  d-flex align-items-center">
         <h2>Titre de commentaire</h2>
         <div class="rating-card d-flex align-items-center">
           <span class="fa fa-star checked"></span>

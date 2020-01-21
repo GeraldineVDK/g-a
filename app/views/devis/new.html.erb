@@ -29,28 +29,19 @@
             Addresse de la prestation:<br>
             <%= f.input :building_address, label: 'Addresse de la prestation', label: false%>
           </div>
-          <!-- <div class="card-info-prestations">
-            Nombre de passages souhaités par semaine?<br>
-            <%= f.input :nr_de_passages, label: 'Nombre de passages souhaités par semaine?', label: false, collection: 1..5  %>
-          </div> -->
           <div class="card-info-prestations">
             Nombre d'heures souhaitées par semaine?<br>
             <%= f.input :nr_d_heures, label: "Nombre d'heures souhaitées par semaine?", label: false, collection: 1..20   %>
           </div>
           <div class="card-info-prestations">
-            Avez-vous un cahier des charges?<br>
             <%= f.input :cahier_de_charges, label: 'Avez-vous un cahier des charges?', label: false, as: :radio_buttons  %>
           </div>
-         <!--  <div class="card-info-prestations">
-            Date souhaitée pour un rendez-vous?<br>
-            <%= f.input :date_rdv, label: 'Date souhaitée pour un rendez-vous?', label: false%>
-          </div> -->
           <div class="card-info-prestations">
             Date souhaitée pour le début du service?<br>
             <%= f.input :date_debut_souhaitee, label: 'Date souhaitée pour le début du service?', label: false%>
           </div>
           <div class="card-info-prestations">
-            <%= f.button :submit, 'Soumettre la demande', class: "btn-ghost-form"%>
+            <%= f.button :submit, 'Soumettre la demande', id: "btn-ghost-form"%>
           </div>
         <% end %>
       </div>
