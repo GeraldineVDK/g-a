@@ -9,18 +9,15 @@ class DevisController < ApplicationController
 
   def create     # POST /devis
     @devi = Devi.new(devi_params)
-    if @devi.save
-      DeviMailer.with(devi: @devi).devi_email.deliver_now
-      flash[:alert] = "Upload successful!"
-      # respond_to do |format|
-      # # Tell the DeviMailer to send a "thank you" email after save - only if the devi form is correctly filled in
-      #   DeviMailer.with(devi: @devi).devi_email.deliver_now
-      #   # format.html { redirect_to devis_path, notice: 'Demande enregistrée.' }
-      # end
-    else
-      # format.html { render action: 'new' }
-      # flash[:alert] = "Upload issue, try again!"
-      render :new
+    respond_to do |format|
+      if @devi.save
+        DeviMailer.with(devi: @devi).devi_email.deliver_now
+        format.html { redirect_to devis_path, notice: 'User was successfully created.' }
+        format.json { render json: @devi, status: :created, location: @devi }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @devi.errors, status: :unprocessable_entity }
+      end
     end
   end
 

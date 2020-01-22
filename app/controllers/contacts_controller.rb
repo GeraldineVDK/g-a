@@ -7,25 +7,20 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 
-  def create        # POST /contacts
+  def create
     @contact = Contact.new(contact_params)
-    @contact.save
-    render :new
-    # if @contact.save
-    #   ContactMailer.with(contact: @contact).contact_email.deliver_now
-    # else
-    #   render :new
-    # end
-    # respond_to do |format|
-    #   # Tell the ContactMailer to send a "thank you" email after save - only if the contact form is correctly filled in
-    #     format.html { redirect_to(@contact, notice: 'Demande de contacte correctement soumise.') }
-    #     format.json { render json: @contact, status: :created, location: @contact }
-    #   else
-    #     format.html { render action: 'new' }
-    #     format.json { render json: @contact.errors, notice: 'Erreur, merci de rééssayer', status: :unprocessable_entity }
-    #   end
-    # end
-    # redirect_to root_path
+
+    respond_to do |format|
+      if @contact.save
+        # Tell the UserMailer to send a welcome email after save
+        ContactMailer.with(contact: @contact).contact_email.deliver_now
+        format.html { redirect_to contacts_path, notice: 'Demande envoyée.' }
+        format.json { render json: @contact, status: :created, location: @contact }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @contact.errors, notice: 'Demande NON envoyée.', status: :unprocessable_entity }
+      end
+    end
   end
 
   private
