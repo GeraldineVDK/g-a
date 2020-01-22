@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
       if @contact.save
         # Tell the UserMailer to send a welcome email after save
         ContactMailer.with(contact: @contact).contact_email.deliver_now
-        format.html { redirect_to contacts_path, notice: 'Demande envoyée.' }
+        format.html { redirect_to contacts_path(@contact), notice: 'Demande envoyée.' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: 'new' }
