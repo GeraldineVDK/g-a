@@ -10,6 +10,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.0'
 # Install Font Awesome
 gem 'font-awesome-sass', '~> 5.12.0'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'letter_opener', group: :development
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
