@@ -3,8 +3,9 @@ class ContactMailer < ApplicationMailer
 
   def contact_email
     @contact = params[:contact]
-    @url  = 'http://example.com/login'
-    mail(to: @contact.email, bcc: 'laurent.vanesse@gmail.com', subject: 'Welcome to My Awesome Site')
+    receiver = params[:contact][:email]
+    # @url  = 'http://example.com/login'
+    mail(to: receiver, bcc: 'laurent.vanesse@gmail.com', subject: 'Welcome to My Awesome Site')
   end
 
 end

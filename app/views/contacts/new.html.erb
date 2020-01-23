@@ -4,10 +4,10 @@
     <h1>Demande de Contact</h1>
     <div class="card-inner">
       <div class="form d-flex">
-        <%= simple_form_for Contact.new do |f| %>
+        <%= simple_form_for(@contact) do |f| %>
             <div class="card-info-prestations">
               Prénom:<br>
-              <%= f.input :prenom,label: false %>
+              <%= f.input :prenom, label: false %>
             </div>
             <div class="card-info-prestations">
               Nom:<br>
@@ -31,6 +31,14 @@
             </div>
           <%= f.button :submit, 'Envoi du Formulaire', id: "btn-ghost-form"%>
         <% end %>
+<!--          <form>
+  <input type="prenom">
+  <input type="nom">
+  <input type="phone">
+  <input type="email">
+  <input type="service">
+   <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+</form> -->
       </div>
       <div class="g-a-contact">
         <%= image_tag("logosample.jpg", :alt => "logosample feed", class: "avatar-medium") %>

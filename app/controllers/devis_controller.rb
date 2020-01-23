@@ -1,5 +1,5 @@
 class DevisController < ApplicationController
-  after_create :envoi_nouveau_devi
+  after_action :envoi_nouveau_devi, only: [:create]
 
   def index
     @devis = Devi.all
