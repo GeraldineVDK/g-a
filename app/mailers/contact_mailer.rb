@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: 'ga-no-reply@gmail.com'
+  default from: "ge.et.lau@gmail.com"
 
   def contact_email
     @contact = params[:contact]
