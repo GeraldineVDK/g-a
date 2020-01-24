@@ -1,12 +1,8 @@
 class DeviMailer < ApplicationMailer
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.devi_mailer.nouveau_devi.subject
-  #
-  def nouveau_devi
-    @devi = params[:devi] # Instance variable => available in view
-    mail(to: devi.value("email"), subject: 'Demande de devis')
+  def devi_email
+    @devi = params[:devi]
+    receiver = params[:devi][:email]
+    # @url  = 'http://example.com/login'
+    mail(to: receiver, bcc: 'laurent.vanesse@gmail.com', subject: 'Merci pour votre demande')
   end
 end
