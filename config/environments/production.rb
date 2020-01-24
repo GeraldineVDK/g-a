@@ -4,7 +4,8 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "g-a-cleaningpro.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "http://www.gacleaningproservices.com/" }
+  config.action_mailer.raise_delivery_errors = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 
