@@ -1,5 +1,5 @@
 class DevisController < ApplicationController
-  after_action :envoi_nouveau_devi, only: [:create]
+  # after_action :envoi_nouveau_devi, only: [:create]
 
   def index
     @devis = Devi.all
@@ -23,6 +23,7 @@ class DevisController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @devi.errors, notice: 'Demande NON envoyée.', status: :unprocessable_entity }
+
       end
     end
   end
