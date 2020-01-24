@@ -4,15 +4,12 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @devi[:first_name]  %></h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @devi[:last_name]  %>.<br>
-    </p>
-    <p>
-      To login to the site, just follow this link.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+
+    <h1>Vous avez envoyé une demande de devis à G&A, merci! %></h1>
+    <p>Voici les coordonnées que vous nous avez communiqué et que nous allons utiliser pour vous joindre:
+      <%= @devi[:nom] %>
+      <%= @devi[:prenom] %>
+      <%= @devi[:email] %>
+      <%= @devi[:phone] %></p>
   </body>
 </html>
-

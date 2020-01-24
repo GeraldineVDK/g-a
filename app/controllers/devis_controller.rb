@@ -11,15 +11,19 @@ class DevisController < ApplicationController
 
   def create     # POST /devis
     @devi = Devi.new(devi_params)
-    @devi.save
+
     respond_to do |format|
       if @devi.save
+        # raise
+        # Tell the UserMailer to send a welcome email after save
         DeviMailer.with(devi: @devi).devi_email.deliver_now
-        format.html { redirect_to devis_path, notice: 'Demande de devis envoyée.' }
+        format.html { redirect_to devis_path(@devi), notice: 'Demande envoyée.' }
+        # raise
         format.json { render json: @devi, status: :created, location: @devi }
       else
         format.html { render action: 'new' }
-        format.json { render json: @devi.errors, status: :unprocessable_entity }
+        format.json { render json: @devi.errors, notice: 'Demande NON envoyée.', status: :unprocessable_entity }
+
       end
     end
   end
