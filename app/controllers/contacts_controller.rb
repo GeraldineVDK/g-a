@@ -12,20 +12,13 @@ class ContactsController < ApplicationController
 
     # respond_to do |format|
       if @contact.save
-        # raise
         # Tell the UserMailer to send a welcome email after save
         ContactMailer.with(contact: @contact).contact_email.deliver_now
-        # flash[:success] = "New Contact."
         # format.html { redirect_to contacts_path(@contact), notice: 'Demande envoyée.' }
-        # # raise
         # format.json { render json: @contact, status: :created, location: @contact }
       else
         render :new
-        # flash[:error] = "Retry."
-        # format.html { render action: 'new' }
-        # format.json { render json: @contact.errors, notice: 'Demande NON envoyée.', status: :unprocessable_entity }
       end
-    # end
   end
 
   private
