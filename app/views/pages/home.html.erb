@@ -17,19 +17,25 @@
 
     <div class="container-who-we-are">
       <div class="container-categories">
-        <h1>Qui Sommes Nous?</h1>
+        <h1>Qui Sommes-Nous?</h1>
       </div>
-      <div class="container-who-we-are-details">
+      <div class="container-who-we-are-details d-flex justify-content-around align-items-center">
         <!-- <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt=""> -->
-        <div class="container-who-we-are-details-text">
-          <p>Lorem ipsum dolor sit amet, his te liber conclusionemque, his docendi sadipscing no. Te est persius perpetua persecuti, et has quando ponderum perfecto.
-            Cu erant iuvaret dissentiunt vix, sea ne assum essent putant, sit in officiis scriptorem delicatissimi. Ex verear ceteros his, ius alia aliquam delicata eu.
-            Quaeque facilis at eam. Eu ferri munere eam, pro iusto dissentiet ea.Ad graeco disputationi definitionem quo, nec in zril forensibus, qui cu agam repudiare assueverit. Per et tamquam noluisse ullamcorper. At his ullum recteque eloquentiam.
-          </p>
-          <p>Nonumy deterruezifjpozejpzeojzpeoj pojedpoej pzoejfpzoej zeopfjjz eepoj isset cu mea. Duo augue docendi accumsan ea. Lorem ipsum dolor sit amet, his te liber conclusionemque, his docendi sadipscing no. Te est persius perpetua persecuti, et has quando ponderum perfecto.
-            Cu erant iuvaret dissentiunt vix, sea ne assum essent putant, sit in officiis scriptorem delicatissimi. Ex verear ceteros his, ius alia aliquam delicata eu.
-            Quaeque facilis at eam. Eu ferri munere eam, pro iusto dissentiet ea.Ad graeco disputationi definitionem quo, nec in zril forensibus, qui cu agam repudiare assueverit.
-          </p>
+        <div class="container-who-we-are-details-text ">
+          <p>Nous sommes une société qui existe depuis 2015 et qui a grandit petit à petit principalement via le bouche à oreilles.
+             Chaque devis est analysé avec soin afin de pouvoir satisfaire un maximum les (futurs) clients.</p>
+          <p>Nos clients actuels sont des copropriétés et des agences bancaires indépendantes. Vous pourrez trouver leurs avis sur notre travail dans la rubrique "L'Expérience Client".</p>
+          <p>Notre entreprise essaie d’utiliser les produits écologiques à condition que ceux-ci soient aussi efficace que les produits « classiques ». A efficacité égale, nous nous tournerons donc vers le produit écologique afin de répondre au mieux aux problématiques climatiques et sanitaires actuelles.</p>
+          <cite>- Laurent Vanesse, Gérant G&A Cleaning Pro Services</cite>
+        </div>
+        <div class="g-a-contact">
+          <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-medium") %>
+          <h2>G&A Cleaning Pro Services</h2>
+          <p>Nr de TVA: 0717771789</p>
+          <p>55, Terkluizendreef</p>
+          <p>1640 Sint-Genesius-Rode</p>
+          <p>0485/13.03.38</p>
+          <p>info@gacleaningproservices.com</p>
         </div>
       </div>
     </div>
@@ -79,7 +85,7 @@
               <div class="service-details">
                 <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
                 <h1>Interventions Spécialisées</h1>
-                <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en états? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
+                <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en état? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
               </div>
             </div>
           </div>
@@ -101,71 +107,9 @@
         </div>
     </div>
   </div>
-
-  <div class="container-clients-input" id='clients'>
-    <h1>L'Expérience Client</h1>
-    <div class="card-input">
-      <div class="top-card d-flex align-items-center">
-        <h2>Travaux de rafraîchissement et nettoyage</h2>
-        <div class="rating-card d-flex align-items-center">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-        </div>
-      </div>
-      <div class="comment-card flex-grow">
-        <p>Je devais raffraîchir un appartement suite à un changement de locataire.
-          Entre les deux locations, il y avait un weekend seulement. J'ai fait appel à G&A,
-          qui a réagit très arpidement: raffraîchissement des peintures pour 100m2 d'appartement,
-          grand nettoyage de l'appartement (sol, armoires, vitres, portes, interrupteurs, SDB avec tous les sanitaires,
-          cusine et tous les élecctroménagés, terrasse) et petite réparatition au niveau de l'écolement d'eau dans la
-          cuisine. J'etais très satisfaite du service et mes nouveaux locataires ravis.
-        </p>
-        <cite>-Mme Morganti, Propriétaire</cite>
-      </div>
-    </div>
-    <div class="card-input">
-      <div class="top-card  d-flex align-items-center">
-        <h2>Nettoyage de Copropriété</h2>
-        <div class="rating-card d-flex align-items-center">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-        </div>
-      </div>
-      <div class="comment-card flex-grow">
-        <p>G&A s'occupe de l'entretien courant du bâtiment où j'habite en tant que locataire.
-          Il n'y a jamais eu de problèmes. Le personnel est très gentil, poli, ainsi qu'efficient et professionnel.
-          C'est aussi beaucoup moins cher que ce que je payais avant.
-        </p>
-        <cite>-Mlle Impellizzeri, Locataire</cite>
-      </div>
-    </div>
-    <div class="card-input">
-      <div class="top-card  d-flex align-items-center">
-        <h2>Titre de commentaire</h2>
-        <div class="rating-card d-flex align-items-center">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star not-checked"></span>
-        </div>
-      </div>
-      <div class="comment-card flex-grow">
-        <p>Lorem ipsum dolor sit amet, ut vix regione albucius torquatos, dolor nonumy id sed.
-        Dico soluta argumentum eu vel, eu quis postea vix. Malis suscipiantur per an, sea eu suas
-        utroque vituperatoribus, quo altera numquam an. Duo case conceptam ne, vis hinc feugiat molestie te.
-        </p>
-        <cite>- The Scream, Syndic</cite>
-      </div>
-    </div>
+  <div class="container-clients-input d-flex align-items-center" id='clients'>
+    <%= render template: 'reviews/index' %>
   </div>
-
   <%= render 'shared/footer' %>
 
 </div>
