@@ -1,5 +1,5 @@
 class DevisController < ApplicationController
-  # after_action :envoi_nouveau_devi, only: [:create]
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
 
   def index
     @devis = Devi.all

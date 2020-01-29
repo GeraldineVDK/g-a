@@ -15,20 +15,21 @@ Rails.application.routes.draw do
 
   # get 'dashboard', to: "dashboard#index", as: :dashboard
 
-  get 'reviews', to: 'reviews#index'
+  get 'reviews/index', to: 'reviews#index', as: :reviews_index
   # get 'dashboard/reviews', to: 'dashboard#reviews', as: :dashboard_reviews
-  patch 'reviews', to: 'reviews#update', as: :reviews_update
-  delete 'reviews', to: 'reviews#destroy', as: :reviews_destroy
+  patch 'reviews/:id', to: 'reviews#update', as: :reviews_update
+  delete 'reviews/:id', to: 'reviews#destroy', as: :reviews_destroy
 
-  get 'devis', to: 'devis#index'
+  get 'devis/index', to: 'devis#index', as: :devis_index
   # get 'dashboard/reviews', to: 'dashboard#reviews', as: :dashboard_reviews
-  patch 'devis', to: 'devis#update', as: :devis_update
-  delete 'devis', to: 'devis#destroy', as: :devis_destroy
+  patch 'devis/:id', to: 'devis#update', as: :devis_update
+  delete 'devis/:id', to: 'devis#destroy', as: :devis_destroy
 
-    get 'contacts', to: 'contacts#index'
+  get 'contacts/index', to: 'contacts#index', as: :contacts_index
   # get 'dashboard/reviews', to: 'dashboard#reviews', as: :dashboard_reviews
-  patch 'contacts', to: 'contacts#update', as: :contacts_update
-  delete 'contacts', to: 'contacts#destroy', as: :contacts_destroy
+  get 'contacts/:id/edit', to: "contacts#edit", as: :edit_contact
+  patch 'contacts/:id', to: 'contacts#update', as: :contacts_update
+  delete 'contacts/:id', to: 'contacts#destroy', as: :contacts_destroy
 
   # get 'dashboard/devis', to: 'dashboard#devis', as: :dashboard_devis
   # patch 'dashboard/devis', to: 'dashboard#devis#update', as: :dashboard_devis_update

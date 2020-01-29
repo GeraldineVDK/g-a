@@ -1,32 +1,37 @@
 <div class="container-all" id="id-container-all">
   <%= render 'shared/navbar' %>
+
   <div class="card-form-dashboard">
-      <h1>Revues des Clients</h1>
+
+    <div class="card-table">
+      <h1>Demandes de Contacte</h1>
       <table style="width:100%">
         <tr class="col-name">
-          <th>Titre</th>
-          <th>Contenu</th>
-          <th>Rating</th>
           <th>Nom</th>
-          <th>Role</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Service</th>
+          <th>Infos Complémentaires</th>
 <!--           <th>Statut</th>
           <th>Mettre à Jous</th>
           <th>Eliminer</th> -->
         </tr>
-        <% @reviews.each do |r|%>
+        <% @contacts.each do |c|%>
           <tr>
-            <td><%= r.title %></td>
-            <td><%= r.content %></td>
-            <td><%= r.rating %></td>
-            <td><%= r.writer %></td>
-            <td><%= r.role %></td>
+            <td><%= c.nom %></td>
+            <td><%= c.prenom %></td>
+            <td><%= c.email %></td>
+            <td><%= c.phone %></td>
+            <td><%= c.service %></td>
+            <td><%= c.additional_info %></td>
             <td><i class="far fa-pause-circle"></i></td>
             <td><i class="far fa-edit" id="update-icon"></i></td>
             <td><i class="far fa-trash-alt" id="delete-icon"></i></td>
           </tr>
         <% end %>
       </table>
-
-        </div>
+    </div>
+  </div>
   <%= render 'shared/footer' %>
 </div>

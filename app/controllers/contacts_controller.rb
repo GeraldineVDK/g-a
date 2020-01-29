@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
+
   def index           # GET /contacts/new
     @contacts = Contact.all
   end
@@ -19,6 +21,19 @@ class ContactsController < ApplicationController
       else
         render :new
       end
+  end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+  end
+
+  def edit
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
   end
 
   private
