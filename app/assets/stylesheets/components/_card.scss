@@ -118,6 +118,23 @@
   margin-top: 0px;
 }
 
+.card-form-user {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 600px;
+  justify-content: space-between;
+  margin: 120px auto;
+  float: none;
+  // border: 2px solid orange;
+  border-radius: 10px;
+}
+
+.card-form-user h2 {
+  margin-top:20px;
+  font-size: 26px;
+}
+
 .card-info-prestations {
   // border: 2px solid red;
   width: 400px;

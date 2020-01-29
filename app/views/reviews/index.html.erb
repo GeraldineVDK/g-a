@@ -1,22 +1,14 @@
     <h1>L'Expérience Client</h1>
     <%= link_to "Partager Votre Expérience", new_review_path, id: "btn-ghost-form" %>
-    <% reviews = Review.all %>
-    <% reviews.each do |review|  %>
-      <div class="card-input">
-        <div class="top-card d-flex align-items-center">
-          <h2><%= review[:title] %></h2>
-          <div class="rating-card d-flex align-items-center">
-            <%= review[:rating] %>
-          </div>
-        </div>
-          <div class="comment-card flex-grow">
-          <p><%= review[:content] %></p>
-          <cite><%= review[:writer] %>, <%= review[:role] %></cite>
+    <div class="card-input">
+      <div class="top-card d-flex align-items-center">
+
+        <div class="rating-card d-flex align-items-center">
         </div>
       </div>
-    <% end %>
-
-
+      <div class="comment-card flex-grow">
+      </div>
+    </div>
     <%= link_to "Partager Votre Expérience", new_review_path, id: "btn-ghost-form" %>
 
 <!--     <div class="card-input">

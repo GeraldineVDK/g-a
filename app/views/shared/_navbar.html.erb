@@ -4,8 +4,22 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag("color-logo-nobckgrd.png", :alt => "logosample feed", class: "avatar")  %>
     <% end %>
+
+
     <ul class="navbar-nav d-flex justify-content-end flex-row">
-      <li class="nav-item d-flex align-items-center">
+
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Demandes de Contacts", "#", id: "nav-item" %>
+          <%= link_to "Demandes de Devis", "#", id: "nav-item" %>
+          <%= link_to "Liste des Revues", "#", id: "nav-item" %>
+          <%= link_to "Nouveau Profil", "#", id: "nav-item" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, id: "nav-item" %>
+          <%= image_tag("drums.jpg", class: "user-avatar") %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <li class="nav-item d-flex align-items-center">
         <%= link_to "Qui sommes-nous?", '/#who', id: "nav-item" %>
       </li>
       <li class="nav-item d-flex align-items-center">
@@ -21,8 +35,10 @@
         <%= link_to "Devis Gatuit", devis_path, id: "nav-item" %>
       </li>
       <li class="nav-item d-flex align-items-center">
-        <%= link_to "Log In", "#", id: "btn-ghost" %>
+        <%= link_to "Log In", new_user_session_path, id: "btn-ghost" %>
       </li>
+      <% end %>
+
     </ul>
 
   </div>
