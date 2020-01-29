@@ -1,0 +1,63 @@
+    <h1>L'Expérience Client</h1>
+    <%= link_to "Partager Votre Expérience", new_review_path, id: "btn-ghost-form" %>
+    <% reviews = Review.all %>
+    <% reviews.each do |review|  %>
+      <div class="card-input">
+        <div class="top-card d-flex align-items-center">
+          <h2><%= review[:title] %></h2>
+          <div class="rating-card d-flex align-items-center">
+            <%= review[:rating] %>
+          </div>
+        </div>
+          <div class="comment-card flex-grow">
+          <p><%= review[:content] %></p>
+          <cite><%= review[:writer] %>, <%= review[:role] %></cite>
+        </div>
+      </div>
+    <% end %>
+
+
+    <%= link_to "Partager Votre Expérience", new_review_path, id: "btn-ghost-form" %>
+
+<!--     <div class="card-input">
+      <div class="top-card d-flex align-items-center">
+        <h2>Travaux de rafraîchissement et nettoyage</h2>
+        <div class="rating-card d-flex align-items-center">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+      <div class="comment-card flex-grow">
+        <p>Je devais raffraîchir un appartement suite à un changement de locataire.
+          Entre les deux locations, il y avait un weekend seulement. J'ai fait appel à G&A,
+          qui a réagit très arpidement: raffraîchissement des peintures pour 100m2 d'appartement,
+          grand nettoyage de l'appartement (sol, armoires, vitres, portes, interrupteurs, SDB avec tous les sanitaires,
+          cusine et tous les élecctroménagés, terrasse) et petite réparatition au niveau de l'écolement d'eau dans la
+          cuisine. J'etais très satisfaite du service et mes nouveaux locataires ravis.
+        </p>
+        <cite>-Mme Morganti, Propriétaire</cite>
+      </div>
+    </div> -->
+    <!-- <div class="card-input">
+      <div class="top-card  d-flex align-items-center">
+        <h2>Nettoyage de Copropriété</h2>
+        <div class="rating-card d-flex align-items-center">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+      <div class="comment-card flex-grow">
+        <p>G&A s'occupe de l'entretien courant du bâtiment où j'habite en tant que locataire.
+          Il n'y a jamais eu de problèmes. Le personnel est très gentil, poli, ainsi qu'efficient et professionnel.
+          C'est aussi beaucoup moins cher que ce que je payais avant.
+        </p>
+        <cite>-Mlle Impellizzeri, Locataire</cite>
+      </div>
+    </div> -->
+
