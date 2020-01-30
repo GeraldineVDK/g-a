@@ -1,0 +1,52 @@
+<div class="container-all-dashboard" id="id-container-all">
+  <%= render 'shared/navbar' %>
+    <div class="container-index-dashboard">
+   <div class="card-form">
+      <h1>Devi nr. <%= @devi.id %></h1>
+      <table style="width:100%">
+        <tr class="col-name">
+          <td>Status</td><td><%= @devi.status %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Nom</td><td><%= @devi.first_name %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Prénom</td><td><%= @devi.last_name %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Email</td><td><%= @devi.email %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Téléphone</td><td><%= @devi.telephone %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Address de la Prestation</td><td><%= @devi.building_address %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Passages/sem.</td><td><%= @devi.nr_de_passages %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Heures/sem.</td><td><%= @devi.nr_d_heures %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Cahier des Charges</td><td><%= @devi.cahier_de_charges %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Service</td><td><%= @devi.service_demande %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Date RDV</td><td><%= @devi.date_rdv %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Début Souhaité de la Préstation</td><td><%= @devi.date_debut_souhaitee%></td>
+        </tr>
+      </table>
+      <%= link_to devi_edit_path do %>
+        <i class="far fa-edit" id="update"></i>
+        <% end %>
+</div>
+    </div>
+  <%= render 'shared/footer' %>
+</div>
+
+

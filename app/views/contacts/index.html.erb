@@ -1,0 +1,52 @@
+<div class="container-all-dashboard" id="id-container-all">
+  <%= render 'shared/navbar' %>
+  <div class="container-index-dashboard">
+  <div class="card-form-dashboard">
+
+    <div class="card-table">
+      <h1>Demandes de Contact</h1>
+      <table style="width:100%">
+        <tr class="col-name">
+          <th>Status</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Service</th>
+          <th>Infos Complémentaires</th>
+          <th></th>
+          <th></th>
+<!--           <th>Statut</th>
+          <th>Mettre à Jous</th>
+          <th>Eliminer</th> -->
+        </tr>
+        <% @contacts.each do |c|%>
+          <tr>
+            <td><% if c.status == "Pending"%>
+              <%= "⏸" %>
+            <% elsif c.status == "Done" %>
+             <%= "✔️" %>
+            <% else  %>
+              <%=  "❌"%>
+            <% end %>
+            </td>
+            <td><%= c.nom %></td>
+            <td><%= c.prenom %></td>
+            <td><%= c.email %></td>
+            <td><%= c.phone %></td>
+            <td><%= c.service %></td>
+            <td><%= c.additional_info %></td>
+            <td><%= link_to contact_path(c.id) do %>
+              <i class="fas fa-info-circle", id='info'></i>
+            <% end %></td>
+            <td><%= link_to contact_destroy_path(c.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
+                  <i class="fa fa-trash", id="trash"></i>
+                <% end %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>

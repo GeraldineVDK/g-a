@@ -1,0 +1,41 @@
+<div class="container-all" id="id-container-all">
+  <%= render 'shared/navbar' %>
+  <div class="card-form">
+    <h1>Demande de Contact nr. <%= @contact.id %></h1>
+    <div class="card-inner">
+      <div class="form d-flex">
+        <%= simple_form_for(@contact) do |f| %>
+            <div class="card-info-prestations">
+              Prénom:<br>
+              <%= f.input :prenom, label: false %>
+            </div>
+            <div class="card-info-prestations">
+              Nom:<br>
+              <%= f.input :nom, label: false%>
+            </div>
+            <div class="card-info-prestations">
+                Téléphone:<br>
+              <%= f.input :phone, label: false%>
+            </div>
+            <div class="card-info-prestations">
+              Email:<br>
+              <%= f.input :email, label: false  %>
+            </div>
+            <div class="card-info-prestations">
+              Service sélectionné<br>
+              <%= f.input :service, label: false, collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %></input>
+            </div>
+            <div class="card-info-prestations">
+              Informations complémentaires:<br>
+              <%= f.input :additional_info, label: 'Info complémentaires', label: false, as: :text%>
+            </div>
+            Statut<br>
+            <%= f.input :status, label: false , collection: ["Done", "Pending", "Closed"]%>
+
+          <%= f.button :submit, 'Mettre à jour', id: "btn-ghost-form"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>

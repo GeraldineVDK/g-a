@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: :dashboard
   def contact
   end
 
@@ -11,4 +12,6 @@ class PagesController < ApplicationController
   def home
   end
 
+  def dashboard
+  end
 end

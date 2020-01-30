@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
+
   def index           # GET /contacts/new
     @contacts = Contact.all
   end
@@ -9,21 +11,39 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    @contact.save
+    set_status
+    redirect_to root_path
+  end
 
-    # respond_to do |format|
-      if @contact.save
-        # Tell the UserMailer to send a welcome email after save
-        ContactMailer.with(contact: @contact).contact_email.deliver_now
-        # format.html { redirect_to contacts_path(@contact), notice: 'Demande envoyée.' }
-        # format.json { render json: @contact, status: :created, location: @contact }
-      else
-        render :new
-      end
+  def show
+    @contact = Contact.find(params[:id])
+  end
+
+  def edit
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    @contact.update(contact_params)
+    redirect_to contacts_index_path
+  end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+    redirect_to contacts_index_path
   end
 
   private
 
   def contact_params
-    params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info)
+    params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info, :status)
+  end
+
+  def set_status
+    @contact.status = "Pending"
+    @contact.save
   end
 end

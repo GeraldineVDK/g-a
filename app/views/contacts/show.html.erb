@@ -1,0 +1,35 @@
+<div class="container-all-dashboard" id="id-container-all">
+  <%= render 'shared/navbar' %>
+    <div class="container-index-dashboard">
+   <div class="card-form">
+      <h1>Contact Details</h1>
+      <table style="width:100%">
+        <tr class="col-name">
+          <td>Status</td><td><%= @contact.status %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Nom</td><td><%= @contact.nom %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Prénom</td><td><%= @contact.prenom %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Email</td><td><%= @contact.email %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Téléphone</td><td><%= @contact.phone %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Service</td><td><%= @contact.service %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Autres détails</th><td><%= @contact.additional_info %></td>
+        </tr>
+      </table>
+      <%= link_to contact_edit_path do %>
+        <i class="far fa-edit" id="update"></i>
+        <% end %>
+</div>
+    </div>
+  <%= render 'shared/footer' %>
+</div>

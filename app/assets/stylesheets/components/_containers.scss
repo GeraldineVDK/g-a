@@ -9,6 +9,14 @@
   margin-bottom: 30px;
 }
 
+.container-all-dashboard {
+  background-color: #e5ebea;
+  // min-width: 100%;
+}
+
+.container-index-dashboard {
+  min-height: 73vh;
+}
 .container-company-intro {
   // border: 2px solid orange;
   margin: 10px;
@@ -23,6 +31,15 @@
 
 .container-create {
   height: 100vh;
+}
+
+.container-all-device {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-devise-user {
+  height: 78vh;
 }
 
 h1 {
