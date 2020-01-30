@@ -1,41 +1,33 @@
-<div class="container-all" id="id-container-all">
+<div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
 
   <div class="card-form-dashboard">
       <h1>Demandes de Devis</h1>
       <table style="width:100%">
         <tr class="col-name">
+          <th>Status</th>
           <th>Nom</th>
           <th>Prénom</th>
           <th>Email</th>
           <th>Téléphone</th>
           <th>Address de la Prestation</th>
-<!--           <th>Passages/sem.</th>
-          <th>Heures/sem.</th> -->
-          <!-- <th>Cahier des Charges</th> -->
           <th>Service</th>
-<!--           <th>Date RDV</th>
-          <th>Début Souhaité de la Prestation</th> -->
-<!--           <th>Statut</th>
-          <th>Mettre à Jous</th>
-          <th>Eliminer</th> -->
         </tr>
         <% @devis.each do |d|%>
           <tr>
+            <td><i class="far fa-pause-circle"></i></td>
             <td><%= d.first_name %></td>
             <td><%= d.last_name %></td>
             <td><%= d.email %></td>
             <td><%= d.telephone %></td>
             <td><%= d.building_address %></td>
-<!--             <td><%= d.nr_de_passages %></td>
-            <td><%= d.nr_d_heures %></td>
-            <td><%= d.cahier_de_charges %></td> -->
             <td><%= d.service_demande %></td>
-<!--             <td><%= d.date_rdv %></td>
-            <td><%= d.date_debut_souhaitee%></td> -->
-            <td><i class="far fa-pause-circle"></i></td>
-            <td><i class="far fa-edit" id="update-icon"></i></td>
-            <td><i class="far fa-trash-alt" id="delete-icon"></i></td>
+            <td><%= link_to devi_path(d.id) do %>
+              <i class="fas fa-info-circle"></i>
+            <% end %></td>
+            <td><%= link_to devi_destroy_path(d.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
+              <i class="fa fa-trash"></i>
+            <% end %></td>
           </tr>
         <% end %>
       </table>

@@ -22,13 +22,15 @@ Rails.application.routes.draw do
 
   get 'devis/index', to: 'devis#index', as: :devis_index
   # get 'dashboard/reviews', to: 'dashboard#reviews', as: :dashboard_reviews
-  patch 'devis/:id', to: 'devis#update', as: :devis_update
-  delete 'devis/:id', to: 'devis#destroy', as: :devis_destroy
+  get 'devis/:id', to: 'devis#show', as: :devi
+  get 'devis/:id', to: 'devis#edit', as: :devi_edit
+  patch 'devis/:id', to: 'devis#update', as: :devi_update
+  delete 'devis/:id', to: 'devis#destroy', as: :devi_destroy
 
   get 'contacts/index', to: 'contacts#index', as: :contacts_index
   # get 'dashboard/reviews', to: 'dashboard#reviews', as: :dashboard_reviews
-  get 'contacts/:id/edit', to: "contacts#edit", as: :edit_contact
-  patch 'contacts/:id', to: 'contacts#update', as: :contacts_update
+  get 'contacts/index/:id/edit', to: "contacts#edit", as: :edit_contact
+  patch 'contacts/:id/update', to: 'contacts#update', as: :contacts_update
   delete 'contacts/:id', to: 'contacts#destroy', as: :contacts_destroy
 
   # get 'dashboard/devis', to: 'dashboard#devis', as: :dashboard_devis

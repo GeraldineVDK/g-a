@@ -11,21 +11,14 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-
-    # respond_to do |format|
-      if @contact.save
-        # Tell the UserMailer to send a welcome email after save
-        ContactMailer.with(contact: @contact).contact_email.deliver_now
-        # format.html { redirect_to contacts_path(@contact), notice: 'Demande envoyée.' }
-        # format.json { render json: @contact, status: :created, location: @contact }
-      else
-        render :new
-      end
+    @contact.save
+    redirect_to root_path
   end
 
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
+    redirect_to contacts_index_path
   end
 
   def edit
@@ -34,11 +27,14 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
+    @contact.update(contact_params)
+    redirect_to contact_path(@contact)
   end
+
 
   private
 
   def contact_params
-    params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info)
+    params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info, :status)
   end
 end

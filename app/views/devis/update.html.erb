@@ -1,0 +1,62 @@
+<div class="container-all-dashboard" id="id-container-all">
+  <%= render 'shared/navbar' %>
+
+  <div class="card-form">
+    <h1>Mettre à jour le devi nr. <%= @devi.id %></h1>
+    <div class="card-inner">
+      <div class="form d-flex">
+        <%= simple_form_for Devi.new do |f| %>
+          <div class="card-info-prestations">
+            Prénom:<br>
+            <%= f.input :first_name %>
+          </div>
+          <div class="card-info-prestations">
+            Nom:<br>
+            <%= f.input :last_name %>
+          </div>
+          <div class="card-info-prestations">
+            Téléphone:<br>
+            <%= f.input :telephone %>
+          </div>
+          <div class="card-info-prestations">
+            Email:<br>
+            <%= f.input :email %>
+          </div>
+          <div class="card-info-prestations">
+            Service sélectionné<br>
+            <%= f.input :service_demande, collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %>
+          </div>
+          <div class="card-info-prestations">
+            Addresse de la prestation:<br>
+            <%= f.input :building_address %>
+          </div>
+          <div class="card-info-prestations">
+            Nombre de passage par semaine?<br>
+            <%= f.input :nr_de_passages, collection: 1..5   %>
+          </div>
+          <div class="card-info-prestations">
+            Nombre d'heures souhaitées par semaine?<br>
+            <%= f.input :nr_d_heures, collection: 1..20   %>
+          </div>
+          <div class="card-info-prestations">
+            <%= f.input :cahier_de_charges, as: :radio_buttons  %>
+          </div>
+          <div class="card-info-prestations">
+            Date souhaitée pour le début du service?<br>
+            <%= f.input :date_debut_souhaitee%>
+          </div>
+          <div class="card-info-prestations">
+            Statut<br>
+            <%= f.input :status, collection: ["Done", nil, "Closed"]%>
+          </div>
+          <div class="card-info-prestations">
+            <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>
+

@@ -11,27 +11,34 @@ class DevisController < ApplicationController
 
   def create     # POST /devis
     @devi = Devi.new(devi_params)
+    @devi.save
+    redirect_to root_path
+  end
 
-    respond_to do |format|
-      if @devi.save
-        # raise
-        # Tell the UserMailer to send a welcome email after save
-        DeviMailer.with(devi: @devi).devi_email.deliver_now
-        format.html { redirect_to devis_path(@devi), notice: 'Demande envoyée.' }
-        # raise
-        format.json { render json: @devi, status: :created, location: @devi }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @devi.errors, notice: 'Demande NON envoyée.', status: :unprocessable_entity }
+  def show
+    @devi = Devi.find(params[:id])
+  end
 
-      end
-    end
+
+  def edit
+    @devi = Devi.find(params[:id])
+  end
+
+  def update
+    @devi = Devi.find(params[:id])
+    @devi.update(devi_params)
+    redirect_to devis_index_path
+  end
+
+  def destroy
+    @devi = Devi.find(params[:id])
+    @devi.destroy
+    redirect_to devis_index_path
   end
 
   private
 
   def devi_params
-    params.require(:devi).permit(:first_name, :last_name, :telephone, :email, :building_address, :nr_de_passages, :nr_d_heures,:cahier_de_charges, :service_demande, :date_rdv, :date_debut_souhaitee)
+    params.require(:devi).permit(:first_name, :last_name, :telephone, :email, :building_address, :nr_de_passages, :nr_d_heures, :cahier_de_charges, :service_demande, :date_rdv, :date_debut_souhaitee, :status)
   end
-
 end

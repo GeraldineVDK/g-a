@@ -1,4 +1,4 @@
-<div class="container-all" id="id-container-all">
+<div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
 
   <div class="card-form-dashboard">
@@ -7,6 +7,7 @@
       <h1>Demandes de Contacte</h1>
       <table style="width:100%">
         <tr class="col-name">
+          <th>Status</th>
           <th>Nom</th>
           <th>Prénom</th>
           <th>Email</th>
@@ -19,15 +20,17 @@
         </tr>
         <% @contacts.each do |c|%>
           <tr>
+            <td><i class="far fa-pause-circle"></i></td>
             <td><%= c.nom %></td>
             <td><%= c.prenom %></td>
             <td><%= c.email %></td>
             <td><%= c.phone %></td>
             <td><%= c.service %></td>
             <td><%= c.additional_info %></td>
-            <td><i class="far fa-pause-circle"></i></td>
             <td><i class="far fa-edit" id="update-icon"></i></td>
-            <td><i class="far fa-trash-alt" id="delete-icon"></i></td>
+            <td><%= link_to contacts_destroy_path(c.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
+                  <i class="fa fa-trash"></i>
+                <% end %></td>
           </tr>
         <% end %>
       </table>
