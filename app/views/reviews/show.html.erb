@@ -1,11 +1,10 @@
 <div class="container-all" id="id-container-all">
   <%= render 'shared/navbar' %>
-  <div class="container-index-dashboard ">
   <div class="card-form">
     <h1>Partager Votre Expérience</h1>
     <div class="card-inner">
       <div class="form d-flex">
-        <%= simple_form_for(@review) do |f| %>
+        <%= simple_form_for Review.new do |f| %>
           <div class="card-info-prestations">
             Titre:<br>
             <%= f.input :title, label: 'Titre du commentaire', label: false, error: 'Champ obligatoire, merci de compléter' %>
@@ -42,7 +41,5 @@
       </div>
     </div>
   </div>
-  </div>
   <%= render 'shared/footer' %>
 </div>
-

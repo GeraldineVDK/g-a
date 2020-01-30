@@ -11,8 +11,12 @@
 
 .container-all-dashboard {
   background-color: #e5ebea;
+  // min-width: 100%;
 }
 
+.container-index-dashboard {
+  min-height: 73vh;
+}
 .container-company-intro {
   // border: 2px solid orange;
   margin: 10px;

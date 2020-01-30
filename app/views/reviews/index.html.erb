@@ -1,6 +1,8 @@
 <div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
+  <div class="container-index-dashboard">
   <div class="card-form-dashboard">
+    <div class="card-table">
       <h1>Revues des Clients</h1>
       <table style="width:100%">
         <tr class="col-name">
@@ -10,9 +12,8 @@
           <th>Rating</th>
           <th>Nom</th>
           <th>Role</th>
-<!--           <th>Statut</th>
-          <th>Mettre à Jous</th>
-          <th>Eliminer</th> -->
+          <th></th>
+          <th></th>
         </tr>
         <% @reviews.each do |r|%>
           <tr>
@@ -23,13 +24,14 @@
             <td><%= r.writer %></td>
             <td><%= r.role %></td>
             <!-- <td><i class="far fa-edit" id="update-icon"></i></td> -->
-            <td><%= link_to reviews_destroy_path(r.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
-                  <i class="fa fa-trash"></i>
+            <td><%= link_to review_destroy_path(r.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
+                  <i class="fa fa-trash", id="trash"></i>
                 <% end %></td>
           </tr>
         <% end %>
       </table>
-
+</div>
+        </div>
         </div>
   <%= render 'shared/footer' %>
 </div>

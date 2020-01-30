@@ -1,7 +1,8 @@
 <div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
-
+  <div class="container-index-dashboard">
   <div class="card-form-dashboard">
+    <div class="card-table">
       <h1>Demandes de Devis</h1>
       <table style="width:100%">
         <tr class="col-name">
@@ -10,12 +11,22 @@
           <th>Prénom</th>
           <th>Email</th>
           <th>Téléphone</th>
-          <th>Address de la Prestation</th>
+          <th>Adresse de la Prestation</th>
           <th>Service</th>
+          <th></th>
+          <th></th>
         </tr>
         <% @devis.each do |d|%>
           <tr>
-            <td><i class="far fa-pause-circle"></i></td>
+            <td><% if d.status == "Pending"%>
+              <%= "⏸" %>
+            <% elsif d.status == "Done" %>
+             <%= "✔️" %>
+            <% else  %>
+              <%=  "❌"%>
+            <% end %>
+            </td>
+
             <td><%= d.first_name %></td>
             <td><%= d.last_name %></td>
             <td><%= d.email %></td>
@@ -23,14 +34,16 @@
             <td><%= d.building_address %></td>
             <td><%= d.service_demande %></td>
             <td><%= link_to devi_path(d.id) do %>
-              <i class="fas fa-info-circle"></i>
+              <i class="fas fa-info-circle", id='info'></i>
             <% end %></td>
             <td><%= link_to devi_destroy_path(d.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
-              <i class="fa fa-trash"></i>
+              <i class="fa fa-trash", id="trash"></i>
             <% end %></td>
           </tr>
         <% end %>
       </table>
+    </div>
   </div>
+</div>
   <%= render 'shared/footer' %>
 </div>

@@ -12,13 +12,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.save
+    set_status
     redirect_to root_path
   end
 
-  def destroy
+  def show
     @contact = Contact.find(params[:id])
-    @contact.destroy
-    redirect_to contacts_index_path
   end
 
   def edit
@@ -28,13 +27,23 @@ class ContactsController < ApplicationController
   def update
     @contact = Contact.find(params[:id])
     @contact.update(contact_params)
-    redirect_to contact_path(@contact)
+    redirect_to contacts_index_path
   end
 
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+    redirect_to contacts_index_path
+  end
 
   private
 
   def contact_params
     params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info, :status)
+  end
+
+  def set_status
+    @contact.status = "Pending"
+    @contact.save
   end
 end

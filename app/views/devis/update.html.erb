@@ -1,11 +1,11 @@
 <div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
-
+  <div class="container-index-dashboard">
   <div class="card-form">
     <h1>Mettre à jour le devi nr. <%= @devi.id %></h1>
     <div class="card-inner">
       <div class="form d-flex">
-        <%= simple_form_for Devi.new do |f| %>
+        <%= simple_form_for(@devi) do |f| %>
           <div class="card-info-prestations">
             Prénom:<br>
             <%= f.input :first_name %>
@@ -47,7 +47,7 @@
           </div>
           <div class="card-info-prestations">
             Statut<br>
-            <%= f.input :status, collection: ["Done", nil, "Closed"]%>
+            <%= f.input :status, collection: ["Done", "Pending", "Closed"]%>
           </div>
           <div class="card-info-prestations">
             <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
@@ -57,6 +57,7 @@
       </div>
     </div>
   </div>
+</div>
   <%= render 'shared/footer' %>
 </div>
 

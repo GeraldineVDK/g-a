@@ -1,104 +1,52 @@
 <div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
-
-  <div class="card-form">
-      <h1>Devi nr. <%= @devi.id %> - Statut <i class="far fa-pause-circle"></i></h1>
-      <%= simple_form_for(@devi) do |f| %>
-          <div class="card-info-prestations">
-            Prénom:<br>
-            <%= f.input :first_name, label: false %>
-          </div>
-          <div class="card-info-prestations">
-            Nom:<br>
-            <%= f.input :last_name, label: false  %>
-          </div>
-          <div class="card-info-prestations">
-            Téléphone:<br>
-            <%= f.input :telephone, label: false  %>
-          </div>
-          <div class="card-info-prestations">
-            Email:<br>
-            <%= f.input :email, label: false  %>
-          </div>
-          <div class="card-info-prestations">
-            Service sélectionné<br>
-            <%= f.input :service_demande, label: false, collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %>
-          </div>
-          <div class="card-info-prestations">
-            Addresse de la prestation:<br>
-            <%= f.input :building_address, label: false  %>
-          </div>
-          <div class="card-info-prestations">
-            Nombre de passage par semaine?<br>
-            <%= f.input :nr_de_passages, label: false , collection: 1..5   %>
-          </div>
-          <div class="card-info-prestations">
-            Nombre d'heures souhaitées par semaine?<br> <%= f.input :nr_d_heures, label: false , collection: 1..20   %>
-          </div>
-          <div class="card-info-prestations">
-            <%= f.input :cahier_de_charges, label: false , as: :radio_buttons  %>
-          </div>
-          <div class="card-info-prestations">
-            Date souhaitée pour le début du service?<br>
-            <%= f.input :date_debut_souhaitee, label: false %>
-          </div>
-          <div class="card-info-prestations">
-            Statut<br>
-            <%= f.input :status, label: false , collection: ["Done", nil, "Closed"]%>
-          </div>
-          <div class="card-info-prestations">
-            <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
-            <% end %>
-          </div>
+    <div class="container-index-dashboard">
+   <div class="card-form">
+      <h1>Devi nr. <%= @devi.id %></h1>
+      <table style="width:100%">
+        <tr class="col-name">
+          <td>Status</td><td><%= @devi.status %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Nom</td><td><%= @devi.first_name %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Prénom</td><td><%= @devi.last_name %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Email</td><td><%= @devi.email %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Téléphone</td><td><%= @devi.telephone %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Address de la Prestation</td><td><%= @devi.building_address %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Passages/sem.</td><td><%= @devi.nr_de_passages %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Heures/sem.</td><td><%= @devi.nr_d_heures %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Cahier des Charges</td><td><%= @devi.cahier_de_charges %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Service</td><td><%= @devi.service_demande %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Date RDV</td><td><%= @devi.date_rdv %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Début Souhaité de la Préstation</td><td><%= @devi.date_debut_souhaitee%></td>
+        </tr>
+      </table>
+      <%= link_to devi_edit_path do %>
+        <i class="far fa-edit" id="update"></i>
         <% end %>
-      <%= link_to devi_edit_path(@devi.id) do %>
-        <i class="far fa-edit" id="update-icon"></i>
-        <% end %>
-      <%= link_to devi_destroy_path(@devi.id), method: :delete, data: { confirm: "Est-vous sûr?" } do %>
-         <i class="fa fa-trash"></i>
-      <% end %></td>
-
+</div>
     </div>
   <%= render 'shared/footer' %>
 </div>
 
-  <!--     <table style="width:100%">
-        <tr class="col-name">
-          <th>Nom</th><td><%= @devi.first_name %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Prénom</th><td><%= @devi.last_name %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Email</th><td><%= @devi.email %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Téléphone</th><td><%= @devi.telephone %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Address de la Prestation</th><td><%= @devi.building_address %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Passages/sem.</th><td><%= @devi.nr_de_passages %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Heures/sem.</th><td><%= @devi.nr_d_heures %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Cahier des Charges</th><td><%= @devi.cahier_de_charges %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Service</th><td><%= @devi.service_demande %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Date RDV</th><td><%= @devi.date_rdv %></td>
-        </tr>
-        <tr class="col-name">
-          <th>Début Souhaité de la Préstation</th><td><%= @devi.date_debut_souhaitee%></td>
-        </tr>
-        <tr class="col-name">
-          <th>Statut</th><td><i class="far fa-pause-circle"></i></td>
-        </tr>
-        <tr class="col-name">
-        </tr>
-      </table> -->
+

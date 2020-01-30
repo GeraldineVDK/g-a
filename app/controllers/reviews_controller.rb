@@ -1,22 +1,22 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
-
-  def index
-    @reviews = Review.all
-  end
-
-  def show
-    @review = Review.find(params[:id])
-  end
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :show]
 
   def new
     @review = Review.new
   end
 
+  def index
+    @reviews = Review.all
+  end
+
   def create
     @review = Review.new(review_params)
     @review.save
-    redirect_to '/#clients'
+    redirect_to root_path
+  end
+
+  def show
+    @review = Review.find(params[:id])
   end
 
   def edit
@@ -38,8 +38,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    # *Strong params*: You need to *whitelist* what can be updated by the user
-    # Never trust user data!
     params.require(:review).permit(:title, :rating, :content, :role, :writer)
   end
 end

@@ -1,5 +1,5 @@
 class DevisController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :show]
 
   def index
     @devis = Devi.all
@@ -12,13 +12,13 @@ class DevisController < ApplicationController
   def create     # POST /devis
     @devi = Devi.new(devi_params)
     @devi.save
+    set_status
     redirect_to root_path
   end
 
   def show
     @devi = Devi.find(params[:id])
   end
-
 
   def edit
     @devi = Devi.find(params[:id])
@@ -40,5 +40,10 @@ class DevisController < ApplicationController
 
   def devi_params
     params.require(:devi).permit(:first_name, :last_name, :telephone, :email, :building_address, :nr_de_passages, :nr_d_heures, :cahier_de_charges, :service_demande, :date_rdv, :date_debut_souhaitee, :status)
+  end
+
+  def set_status
+    @devi.status = "Pending"
+    @devi.save
   end
 end
