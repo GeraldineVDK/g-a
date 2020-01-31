@@ -27,7 +27,7 @@
             <%= f.input :role, label: 'A bénéficier du service en tant que', label: false%>
           </div>
           <div class="card-info-prestations">
-            <%= f.button :submit, 'Soumettre le commentaire', id: "btn-ghost-form"%>
+            <%= f.button :submit, 'Soumettre le commentaire', id: "btn-ghost-form", data: { confirm: "Merci!" } %>
           </div>
         <% end %>
       </div>
