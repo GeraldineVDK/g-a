@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.save
+    set_status
     redirect_to root_path
   end
 
@@ -26,7 +27,7 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     @review.update(review_params)
-    redirect_to review_path(@review)
+    redirect_to reviews_index_path
   end
 
   def destroy
@@ -38,6 +39,11 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :rating, :content, :role, :writer)
+    params.require(:review).permit(:title, :rating, :content, :role, :writer, :status)
+  end
+
+    def set_status
+    @review.status = "Pending"
+    @review.save
   end
 end
