@@ -3,23 +3,24 @@
   <div class="container-index-dashboard ">
   <div class="card-form">
     <h1>Partager Votre Expérience</h1>
+
     <div class="card-inner">
       <div class="form d-flex">
         <%= simple_form_for(@review) do |f| %>
           <div class="card-info-prestations">
-            Titre:<br>
+            Titre*:<br>
             <%= f.input :title, label: 'Titre du commentaire', label: false, error: 'Champ obligatoire, merci de compléter' %>
           </div>
           <div class="card-info-prestations">
-            Evaluation:<br>
+            Evaluation*:<br>
             <%= f.input :rating, label: 'Evaluation', label: false, error: 'Champ obligatoire, merci de compléter', collection: (1..5)  %>
           </div>
           <div class="card-info-prestations">
-            Contenu:<br>
+            Contenu*:<br>
             <%= f.input :content, label: 'Contenu', label: false, error: 'Champ obligatoire, merci de compléter'  %>
           </div>
           <div class="card-info-prestations">
-            Référence:<br>
+            Référence*:<br>
             <%= f.input :writer, label: 'Référence', label: false, error: 'Champ obligatoire, merci de compléter'  %>
           </div>
           <div class="card-info-prestations">
@@ -30,6 +31,7 @@
             <%= f.button :submit, 'Soumettre le commentaire', id: "btn-ghost-form", data: { confirm: "Merci!" } %>
           </div>
         <% end %>
+
       </div>
       <div class="g-a-contact">
         <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-medium") %>
@@ -41,6 +43,7 @@
         <p>info@gacleaningproservices.com</p>
       </div>
     </div>
+  <cite>* Champs obligatoires. Si ces informations ne sont pas complétées, le formulaire ne sera pas soumis. Merci de votre compréhension.</cite>
   </div>
   </div>
   <%= render 'shared/footer' %>

@@ -20,9 +20,14 @@
           <td>Role</td><td><%= @review.role %></td>
         </tr>
       </table>
+      <div class="icons d-flex">
       <%= link_to review_edit_path do %>
         <i class="far fa-edit" id="update"></i>
+      <% end %>
+      <%= link_to reviews_index_path do %>
+        <i class="fas fa-times" id="close"></i>
         <% end %>
+      </div>
         </div>
   </div>
   <%= render 'shared/footer' %>
