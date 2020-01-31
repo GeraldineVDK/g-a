@@ -42,7 +42,7 @@
             <%= f.input :date_debut_souhaitee, label: 'Date souhaitée pour le début du service?', label: false%>
           </div>
           <div class="card-info-prestations">
-            <%= f.button :submit, 'Soumettre la demande', id: "btn-ghost-form"%>
+            <%= f.button :submit, 'Soumettre la demande', id: "btn-ghost-form", data: { confirm: "Merci!" }%>
           </div>
         <% end %>
       </div>
