@@ -3,47 +3,54 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
   <style>
 
 
   .error-page {
 /*    background-: linear-gradient(#293462, #f7be16);*/
-    background-image: linear-gradient(90deg, rgba(41, 52, 98, 0.3), rgba(146, 158, 209, 0.5)), url("https://images.unsplash.com/photo-1529029411565-e04366ee3cc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-image: url("https://images.unsplash.com/photo-1473452784071-a5f531af184f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-size: cover;
     color: #f2f4fa
-    text-align: center;
-    margin: 0;
+    /*text-align: left;*/
+
+
   }
 
 
   .error-page h1 {
     font-size: 42px;
-    color: #f2f4fa;
-    line-height: 1.5em;
-    text-align: center;
-    margin-top: 300px;
+    color: #e5edf1;
+    line-height: 0.5em;
+    /*text-align: left;*/
+        margin-top: 58vh;
+        margin-left: 200px;
+            text-shadow: 6px 6px 12px rgba(0, 21, 25, 0.9);
     font-family: "Roboto", sans-serif;
   }
 
   .error-page p {
     font-size: 24px;
-    color: #f2f4fa;
+    color: #e5edf1;
     opacity: 0.8;
-    line-height: 1.5em;
-    text-align: center;
+    line-height: 0.3em;
+    /*text-align: left;*/
+        margin-top: 5vh;
+        margin-left: 200px;
     font-family: "Roboto", sans-serif;
+        text-shadow: 6px 6px 12px rgba(0, 21, 25, 0.9);
 /*    margin-top: 300px;*/
   }
 
 
 .error-page-text a {
   text-decoration: none;
-  color: #f7be16;
+  color: #c4d5df;
 }
 
 .error-page-text a:hover {
-    opacity: 0.8;
-    color: #f7be16;
+/*    opacity: 0.6;*/
+    color: #e5edf1;
   }
 
   </style>
@@ -53,9 +60,9 @@
   <!-- This file lives in public/404.html -->
   <div class="error-page-text">
     <div>
-      <h1>Sorry, we couldn't find what you were looking for.</h1>
-      <p>Our developers are enjoying their holiday, but they still want to help you!</p>
-      <p>Shall we take you back <a href="/" class="btn btn-default">home</a>?</p>
+      <h1>Désolés!</h1>
+      <p><strong>La page que vous recherchez est introuvable...</strong></p>
+      <p><strong>Permettez-nous de vous raccompagner à la<a href="/" class="btn btn-default"><em> page d'accueil</em></a>.</strong></p>
     </div>
   </div>
 </body>

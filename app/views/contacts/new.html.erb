@@ -6,23 +6,23 @@
       <div class="form d-flex">
         <%= simple_form_for(@contact) do |f| %>
             <div class="card-info-prestations">
-              Prénom:<br>
+              Prénom*:<br>
               <%= f.input :prenom, label: false %>
             </div>
             <div class="card-info-prestations">
-              Nom:<br>
+              Nom*:<br>
               <%= f.input :nom, label: false%>
             </div>
             <div class="card-info-prestations">
-                Téléphone:<br>
+                Téléphone*:<br>
               <%= f.input :phone, label: false%>
             </div>
             <div class="card-info-prestations">
-              Email:<br>
+              Email*:<br>
               <%= f.input :email, label: false  %>
             </div>
             <div class="card-info-prestations">
-              Service sélectionné<br>
+              Service sélectionné*<br>
               <%= f.input :service, label: false, collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %></input>
             </div>
             <div class="card-info-prestations">
@@ -42,6 +42,7 @@
         <p>info@gacleaningproservices.com</p>
       </div>
     </div>
+    <cite>* Champs obligatoires. Si ces informations ne sont pas complétées, le formulaire ne sera pas soumis. Merci de votre compréhension.</cite>
   </div>
   <%= render 'shared/footer' %>
 </div>
