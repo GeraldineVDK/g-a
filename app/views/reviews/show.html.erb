@@ -1,45 +1,30 @@
-<div class="container-all" id="id-container-all">
+<div class="container-all-dashboard" id="id-container-all">
   <%= render 'shared/navbar' %>
+  <div class="container-index-dashboard">
   <div class="card-form">
-    <h1>Partager Votre Expérience</h1>
-    <div class="card-inner">
-      <div class="form d-flex">
-        <%= simple_form_for Review.new do |f| %>
-          <div class="card-info-prestations">
-            Titre:<br>
-            <%= f.input :title, label: 'Titre du commentaire', label: false, error: 'Champ obligatoire, merci de compléter' %>
-          </div>
-          <div class="card-info-prestations">
-            Evaluation:<br>
-            <%= f.input :rating, label: 'Evaluation', label: false, error: 'Champ obligatoire, merci de compléter', collection: (1..5)  %>
-          </div>
-          <div class="card-info-prestations">
-            Contenu:<br>
-            <%= f.input :content, label: 'Contenu', label: false, error: 'Champ obligatoire, merci de compléter'  %>
-          </div>
-          <div class="card-info-prestations">
-            Référence:<br>
-            <%= f.input :writer, label: 'Référence', label: false, error: 'Champ obligatoire, merci de compléter'  %>
-          </div>
-          <div class="card-info-prestations">
-            A bénéficié du service en tant que<br>
-            <%= f.input :role, label: 'A bénéficier du service en tant que', label: false%>
-          </div>
-          <div class="card-info-prestations">
-            <%= f.button :submit, 'Soumettre le commentaire', id: "btn-ghost-form"%>
-          </div>
+<h1>Revue nr. <%= @review.id %></h1>
+      <table style="width:100%">
+        <tr class="col-name">
+          <td>Status</td><td><%= @review.status %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Evaluation</td><td><%= @review.rating %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Contenu</td><td><%= @review.content %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Référence</td><td><%= @review.writer %></td>
+        </tr>
+        <tr class="col-name">
+          <td>Role</td><td><%= @review.role %></td>
+        </tr>
+      </table>
+      <%= link_to review_edit_path do %>
+        <i class="far fa-edit" id="update"></i>
         <% end %>
-      </div>
-      <div class="g-a-contact">
-        <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-medium") %>
-        <h2>G&A Cleaning Pro Services</h2>
-        <p>Nr de TVA: 0717771789</p>
-        <p>55, Terkluizendreef</p>
-        <p>1640 Sint-Genesius-Rode</p>
-        <p>0485/13.03.38</p>
-        <p>info@gacleaningproservices.com</p>
-      </div>
-    </div>
+        </div>
   </div>
   <%= render 'shared/footer' %>
 </div>
+

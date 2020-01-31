@@ -1,1 +1,37 @@
-edit.html.erb
+<div class="container-all-dashboard" id="id-container-all">
+  <%= render 'shared/navbar' %>
+  <div class="container-index-dashboard">
+    <div class="card-form">
+      <h1>Devi nr. <%= @review.id %></h1>
+      <%= simple_form_for(@review) do |f| %>
+          <div class="card-info-prestations">
+            Evaluation:<br>
+            <%= f.input :rating, label: false, inclusion: { in: (1..5)} %>
+          </div>
+          <div class="card-info-prestations">
+            Contenu:<br>
+            <%= f.input :content, label: false  %>
+          </div>
+          <div class="card-info-prestations">
+            Référence:<br>
+            <%= f.input :writer, label: false  %>
+          </div>
+          <div class="card-info-prestations">
+            Role:<br>
+            <%= f.input :role, label: false  %>
+          </div>
+          <div class="card-info-prestations">
+            Statut<br>
+            <%= f.input :status, label: false, collection: ["Lu", "Pending", "Action à prendre"]  %>
+          </div>
+          <div class="card-info-prestations">
+            <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <%= render 'shared/footer' %>
+</div>
+
+
