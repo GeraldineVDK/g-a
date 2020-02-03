@@ -6,7 +6,6 @@
   margin: 1vh 0.5vw;
   width: 25vw;
   height: 54vh;
-  // padding-right:0.2vw;
   padding-left: 0;
 }
 
@@ -31,7 +30,6 @@
 
 .card-service-inner {
   position: relative;
-  // width: 25vw;
   height: 54vh;
   text-align: center;
   transition: transform 0.6s;
@@ -95,13 +93,12 @@
 
 .card-form h1 {
   // margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .card-form-dashboard {
   background-color: white;
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
-  padding: 2vh 2vw;
   width: 80vw;
   justify-content: space-between;
   margin: 5vh auto;
@@ -109,10 +106,6 @@
   // border: 2px solid orange;
   border-radius: 1vw;
 }
-
-// .card-form-dashboard h1 {
-//   margin-top: 0px;
-// }
 
 .card-form-user {
   background-color: white;
@@ -128,7 +121,7 @@
 
 .card-form-user h2 {
   // margin-top:20px;
-  font-size: 3rem;
+  font-size: 3vw;
 }
 
 .card-info-prestations {
@@ -136,13 +129,6 @@
   width: 20vw;
   margin-bottom: 2vh;
 }
-
-// .form {
-//   // border: 2px solid blue;
-//   // width: 400px;
-//   padding: 10px;
-//   margin: 10px;
-// }
 
 .g-a-contact {
   width: 40vw;
@@ -156,7 +142,7 @@
   border-radius: 1vh;
   align-items: center;
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify: center;
 }
@@ -182,58 +168,56 @@
   width: 50vw;
 }
 
+
+.card-form cite {
+  font-size: 1vw;
+  padding: 2vh 2vw;
+}
+
 .card-input {
-  height: 300px;
+  width: 60vw;
   display: flex;
-  // justify-content: center;
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
-  margin: 40px 300px 40px 300px;
-  // border: 2px solid red;
-  // padding: 5px;
-  flex-direction: column
+  margin: 4vh auto;
+  flex-direction: column;
 }
 
 .top-card {
   display: flex;
   justify-content: space-between;
   // border: 2px solid green;
-  width: 100%;
+  width: 60vw;
   background-color: rgba(23,103,100,0.1);
-  // color: #f5e1da;
-  // position: -webkit-sticky;
-  // position: sticky;
-  // top: 0px;
-  // padding: 10px;
-  height: 80px;
+  height: 6vh;
 }
 
 .top-card h2 {
-  padding-left: 40px;
+  padding-left: 2vw;
 }
 
 .rating-card {
   // display:flex;
   // border: 2px solid blue;
-  padding-right: 40px;
+  padding-right: 2vw;
   // padding-top: 30px;
 
 }
 
 .rating-card i {
-  font-size: 1.25rem;
+  font-size: 1vw;
 }
 
 .comment-card {
   // border: 2px solid orange;
-  padding: 20px;
+  padding: 2vh 2vw;
   // flex: grow;
 }
 
 .card-table {
-  padding: 10px;
+  padding: 2vh 2vw;
 }
 
 .card-table h1 {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
+  margin-bottom: 2vh;
+  font-size: 3vw;
 }
