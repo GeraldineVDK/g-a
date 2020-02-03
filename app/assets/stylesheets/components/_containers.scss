@@ -62,7 +62,8 @@
 .container-who-we-are {
   // border: 2px solid black;
   margin: 12vh 0;
-  padding: 0 3vw;
+  padding: 3vh 3vw;
+  width: 100vw;
 }
 
 .container-who-we-are h1 {
@@ -76,16 +77,16 @@
 
 .container-who-we-are-details-text {
   // border: 2px solid blue;
-  padding: 3vh 0;
-  width: 70vw;
+  // padding: 3vh 0;
+  // width: 65vw;
 }
 
 .container-who-we-are-details-text p {
-  padding: 0.5vh 3vw;
+  // padding: 0.5vh 3vw;
 }
 
 .container-who-we-are-details-text cite {
-  padding: 0.5vh 3vw;
+  // padding: 0.5vh 3vw;
   margin-top: 1vh;
 }
 
@@ -127,11 +128,12 @@
 
 #who h1 {
   font-size: 4vw;
+  margin-bottom:6vh;
 }
 
 #services {
-    background-color: #e5ebea;
-    padding: 12vh 0vw;
+  background-color: #e5ebea;
+  padding: 12vh 0vw;
 }
 
 #services h1 {
