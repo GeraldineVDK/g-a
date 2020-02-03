@@ -7,7 +7,7 @@
   opacity: 0.8;
   transition: opacity 0.3s ease;
   font-family: 'Strait', sans-serif;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   &:hover {
     opacity: 1;
     text-decoration: none;
@@ -43,9 +43,10 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin-top: 0.5vh;
+  margin-bottom: 1vh;
   background-color:#f5e1da;
   font-family: 'Strait', sans-serif;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   &:hover {
     opacity: 1;
     text-decoration: none;
