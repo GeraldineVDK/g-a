@@ -1,16 +1,17 @@
 .not-checked {
   color: rgba(23,103,100,0.2);
-  font-size: 25px;
+  font-size: 1.5vw;
 }
 
 .checked {
   color: #176764;
-  font-size: 25px;
+  font-size: 1.5vw;
 }
 
 #trash {
   color: rgba(23,103,100,0.4);
-  font-size: 25px;
+  font-size: 1.5vw;
+    margin-left: 0.25vw;
 }
 
 #trash:hover {
@@ -19,7 +20,8 @@
 
 #info {
   color: rgba(23,103,100,0.4);
-    font-size: 25px;
+    font-size: 1.5vw;
+      margin-right: 0.25vw;
 }
 
 #info:hover {
@@ -28,9 +30,9 @@
 
 #update {
   color: rgba(23,103,100,0.4);
-  margin: 20px auto;
-  font-size: 25px;
-  margin: 10px;
+  margin: 3vh auto;
+  font-size: 1.5vw;
+  margin-right: 0.5vw;
 }
 
 #update:hover {
@@ -39,9 +41,9 @@
 
 #close {
   color: rgba(23,103,100,0.4);
-  margin: 20px auto;
-  font-size: 25px;
-  margin: 10px;
+  margin: 3vh auto;
+  font-size: 1.5vw;
+  margin-left: 0.5vw;
 }
 
 #close:hover {

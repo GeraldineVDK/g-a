@@ -4,35 +4,33 @@
   background: #176764;
   height: 12vh;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 4;
 }
 
 #navbar {
   top: 0;
-  width: 100%;
+  width: 100vw;
   position: sticky;
 }
 
 #nav-item {
-  padding-right: 20px;
+  padding-right: 1vw;
   color: #f5e1da;
-  font-size: 22px;
+  font-size: 1.3vw;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Strait', sans-serif;
   &:hover {
-    text-shadow: 2px 2px 8px  #49beb7;
+    text-shadow: 0.2vw 0.2vh 0.8vw  #49beb7;
     color: #f5e1da;
     text-decoration: none;
   }
 }
 
 .navbar ul {
-  padding: 40px 10px;
   position: absolute;
-  right: 20px;
-  margin-left: 90px;
+  right: 2vw;
   display: inline-block;
 }
 
