@@ -43,27 +43,35 @@
 
 .card-service-front, .card-service-back {
   position: absolute;
-  width: 25vw;
+  // width: 25vw;
   height: 54vh;
   backface-visibility: hidden;
 }
 
 .card-service-front {
   background: transparent;
-  width: 25vw;
+  // width: 25vw;
+}
+
+.card-service-front h3 {
+  font-size: 1.5vw;
 }
 
 .card-service-back {
   background: #176764;
-  width: 25vw;
+  // width: 25vw;
   color: #f5e1da;
   transform: rotateY(180deg);
 }
 
 .card-service-back h3 {
   margin-top: 7vh;
+  font-size: 2vw;
+    padding: 2vh 2vw;
 }
 .card-service-back p {
+    padding: 2vh 2vw;
+    font-size: 1.1vw;
   color: #f5e1da;
 }
 
