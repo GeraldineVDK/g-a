@@ -1,4 +1,4 @@
-<div class="container-all" id="id-container-all">
+<div class="container-all">
   <div class="container-logo">
     <div class="container-avatar">
       <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-large") %>
@@ -19,18 +19,18 @@
       <div class="container-categories">
         <h1>Qui Sommes-Nous?</h1>
       </div>
-      <div class="container-who-we-are-details d-flex justify-content-around align-items-center">
+      <div class="container-who-we-are-details d-flex justify-content-center">
         <!-- <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt=""> -->
-        <div class="container-who-we-are-details-text ">
+        <div class="container-who-we-are-details-text col-12 col-md-6 col-lg-9">
           <p>Nous sommes une société qui existe depuis 2015 et qui a grandit petit à petit principalement via le bouche à oreilles.
              Chaque devis est analysé avec soin afin de pouvoir satisfaire un maximum les (futurs) clients.</p>
           <p>Nos clients actuels sont des copropriétés et des agences bancaires indépendantes. Vous pourrez trouver leurs avis sur notre travail dans la rubrique "L'Expérience Client".</p>
           <p>Notre entreprise essaie d’utiliser les produits écologiques à condition que ceux-ci soient aussi efficace que les produits « classiques ». A efficacité égale, nous nous tournerons donc vers le produit écologique afin de répondre au mieux aux problématiques climatiques et sanitaires actuelles.</p>
           <cite>- Laurent Vanesse, Gérant G&A Cleaning Pro Services</cite>
         </div>
-        <div class="g-a-contact">
+        <div class="g-a-contact col-12 col-md-6 col-lg-3">
           <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-medium") %>
-          <h2>G&A Cleaning Pro Services</h2>
+          <h4>G&A Cleaning Pro Services</h4>
           <p>Nr de TVA: 0717771789</p>
           <p>55, Terkluizendreef</p>
           <p>1640 Sint-Genesius-Rode</p>
@@ -44,62 +44,62 @@
       <div class="container-categories">
         <h1>Services Proposés</h1>
       </div>
-      <div class="container-listofservices">
-        <div class="card-service">
+      <div class="container-listofservices d-flex justify-content-center align-items-center">
+        <div class="card-service col-12 col-md-6 col-lg-3">
           <div class="card-service-inner">
             <div class="card-service-front">
               <%= image_tag "bureaux.jpg" %>
-              <h1>Bureaux & Locaux Professionnels</h1>
+              <h3>Bureaux & Locaux Professionnels</h3>
             </div>
             <div class="card-service-back">
               <div class="service-details">
                 <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
-                <h1>Bureaux & Locaux Professionnels</h1>
+                <h3>Bureaux & Locaux Professionnels</h3>
                 <p>G&A vous propose un nettoyage régulier ou ponctuel d’espace de travail. Presentez-nous vos besoins et nous pourrons définir ensemble un service à la carte qui convient le mieux à votre activité professionnelle.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-service">
+        <div class="card-service col-12 col-md-6 col-lg-3">
           <div class="card-service-inner">
             <div class="card-service-front">
               <%= image_tag "copropriétés.jpg" %>
-              <h1>Copropriétés & Espaces Communs</h1>
+              <h3>Copropriétés & Espaces Communs</h3>
             </div>
             <div class="card-service-back">
               <div class="service-details">
                 <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
-                <h1>Copropriétés & Espaces Communs</h1>
+                <h3>Copropriétés & Espaces Communs</h3>
                 <p>G&A vous propose un service discret, rapide et efficace pour vous aider à entretenir copropriétés et espaces communs d'immeubles de logement.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-service">
+        <div class="card-service col-12 col-md-6 col-lg-3">
           <div class="card-service-inner">
             <div class="card-service-front">
               <%= image_tag "wall-painting.jpg" %>
-              <h1>Interventions Spécialisées</h1>
+              <h3>Interventions Spécialisées</h3>
             </div>
             <div class="card-service-back">
               <div class="service-details">
                 <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
-                <h1>Interventions Spécialisées</h1>
+                <h3>Interventions Spécialisées</h3>
                 <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en état? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-service">
+        <div class="card-service col-12 col-md-6 col-lg-3">
           <div class="card-service-inner">
             <div class="card-service-front">
               <%= image_tag "entretien_espaces_verts.jpg"%>
-              <h1>Entretien Espaces Verts</h1>
+              <h3>Entretien Espaces Verts</h3>
             </div>
             <div class="card-service-back">
               <div class="service-details">
                 <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
-                <h1>Entretien Espaces Verts</h1>
+                <h3>Entretien Espaces Verts</h3>
                 <p>Vous souhaitez entretenir un espace vert dans votre copropriété ou lieu de travail, mais n'avez pas le temps ou le materiel adéquat? G&A peut s'en charger!</p>
               </div>
             </div>

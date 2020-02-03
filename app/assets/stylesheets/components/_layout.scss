@@ -8,18 +8,46 @@ html body {
 
 h1 {
   text-align: center;
-  font-size: 44px;
-  font-family: 'Strait', sans-serif;;
+  // font-size: 3.5em;
+  font-family: 'Strait', sans-serif;
+  color: #176764;
+  // font-weight: bold;
 }
 
 h2 {
   text-align: center;
-  font-size: 28px;
-  font-family: 'Strait', sans-serif;;
+  // font-size: 3em;
+  font-family: 'Strait', sans-serif;
+  color: #176764;
+  // font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  // font-size: 2.5em;
+  font-family: 'Strait', sans-serif;
+  color: #176764;
+  // font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+  // font-size: 2em;
+  font-family: 'Strait', sans-serif;
+  color: #176764;
+  // font-weight: bold;
+}
+
+h5 {
+  text-align: center;
+  // font-size: 2em;
+  font-family: 'Strait', sans-serif;
+  // color: #176764;
+  // font-weight: bold;
 }
 
 p {
   text-align: justify;
-  font-size: 22px;
+  font-size: 1.3rem;
   font-family: 'Raleway', sans-serif;
 }

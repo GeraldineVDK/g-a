@@ -4,6 +4,39 @@
   flex-direction: column;
 }
 
+.container-logo {
+  height: 88vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify: center;
+  width: 100%;
+  background:linear-gradient(rgba(23,103,100,0.0), rgba(23,103,100,1)), url(bricks2.jpg);
+  text-align: center;
+  // padding-top: 30px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container-logo h1 {
+  color: #f5e1da;
+  font-size: 5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 16px #043234;
+  // font-family: 'Strait', sans-serif;
+}
+
+.container-logo h2 {
+  color: #f5e1da;
+  font-size: 4rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 16px #043234;
+}
+
 .container-categories {
   // border: 2px solid red;
   margin-bottom: 30px;
@@ -11,7 +44,6 @@
 
 .container-all-dashboard {
   background-color: #e5ebea;
-  // min-width: 100%;
 }
 
 .container-index-dashboard {
@@ -42,17 +74,6 @@
   height: 78vh;
 }
 
-h1 {
-  color: #176764;
-  font-size: 60px;
-  // line-height: 2.5;
-}
-
-h2 {
-  color: #176764;
-  font-size: 40px;
-}
-
 .container-listofservices {
   // border: 2px solid brown;
   display: flex;
@@ -65,15 +86,13 @@ h2 {
   position: relative;
 }
 
-.service-details h1 {
+.service-details h3 {
   color: #f5e1da;
-  font-size: 26px;
   padding: 10px;
 }
 
 .service-details p {
   color: #f5e1da;
-  font-size: 20px;
   padding: 10px;
 }
 
@@ -82,18 +101,15 @@ h2 {
   margin-top: 120px;
   margin-bottom: 120px;
   padding: 10px;
-
 }
 
 .container-who-we-are .container-categories h1 {
-  font-size: 60px;
-  font-family: 'Strait', sans-serif;
+  font-size: 4rem;
 }
 
 .container-who-we-are-details {
   display:flex;
   // border: 2px solid orange;
-    // padding: 40px;
 }
 
 .container-who-we-are-details-text {
@@ -101,8 +117,14 @@ h2 {
   padding: 60px;
   width: 70%;
 }
+
 .container-who-we-are-details-text p {
-  padding: 5px 20px;
+  padding: 5px 30px;
+}
+
+.container-who-we-are-details-text cite {
+  padding: 10px 30px;
+  margin-top: 5px;
 }
 
 .container-services {
@@ -110,7 +132,6 @@ h2 {
   width: 100%;
   background-color: rgba(23,103,100,0.1);
   padding: 120px 0px 120px 0px;
-    // margin-top: 120px;
 }
 
 .container-services .container-categories {
@@ -132,59 +153,17 @@ h2 {
 }
 
 .container-services .container-categories h1 {
-  font-size: 60px;
-  font-family: 'Strait', sans-serif;
+  font-size: 4rem;
 }
 
-.container-logo {
-  height: 88vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify: center;
-  width: 100%;
-  background:linear-gradient(rgba(23,103,100,0.0), rgba(23,103,100,1)), url(bricks2.jpg);
-  text-align: center;
-  padding-top: 30px;
-  // background: image-url('bricks2.jpg') no-repeat center center fixed;
-  // opacity: 0.4;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  // opacity: linear-gradient(rgba(8,95,99,0.2), #176764);
-}
-
-.container-logo h1 {
-  color: #f5e1da;
-  font-size: 70px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-shadow: 4px 4px 16px #043234;
-  // font-family: 'Strait', sans-serif;
-}
-
-.container-logo h2 {
-  color: #f5e1da;
-  font-size: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-shadow: 4px 4px 16px #043234;
-  // font-family: 'Strait', sans-serif;
-}
 
 .container-clients-input {
-  // margin-top: 120px;
   padding-top: 120px;
   padding-bottom: 120px;
-  // display: flex;
   flex-direction: column;
-  // align-items: center;
   // border: 2px solid black;
 }
 
 #clients h1 {
-  font-size: 60px;
-  font-family: 'Strait', sans-serif;
-
+  font-size: 4rem;
 }

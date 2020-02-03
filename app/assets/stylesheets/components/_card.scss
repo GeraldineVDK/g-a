@@ -3,9 +3,12 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // border: 2px solid blue;
-  margin: 20px;
-  width: 500px;
+  margin: 10px;
+  width: 400px;
   height: 400px;
+  padding-right:0px;
+  padding-left:0px;
+
 }
 
 .card-service-front > img {
@@ -14,43 +17,23 @@
   object-fit: cover;
 }
 
-.card-service h1 {
-  font-size: 24px;
-  font-weight: bold;
+.card-service h3 {
+  // font-size: 24px;
+  // font-weight: bold;
   margin-top: 10px;
-  color: #176764;
+  // color: #176764;
   background-color: transparent;
-  font-family: 'Strait', sans-serif;
-  padding-right: 20px;
-  padding-left: 20px;
+  // font-family: 'Strait', sans-serif;
+  // padding-right: 20px;
+  // padding-left: 20px;
 }
 
 .service-details {
   margin-top: 70px;
 }
 
-.card-service .card-service-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  // border: 2px solid red;
-}
-
-.card-service .card-service-infos h1 {
-  text-align: center;
-  font-size: 26px;
-  color: white;
-  font-family: 'Strait', sans-serif;
-}
-
-.card-service .card-service-infos p {
-  text-align: justify;
-  font-size: 20px;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  padding: 20px;
+.card-service .service-details p {
+  padding: 0px 20px;
 }
 
 
@@ -79,7 +62,6 @@
 
 .card-service-front {
   background: transparent;
-  color: black;
 }
 
 .card-service-back {
@@ -152,7 +134,7 @@
 
 .card-form-user h2 {
   margin-top:20px;
-  font-size: 26px;
+  font-size: 3rem;
 }
 
 .card-info-prestations {
@@ -189,7 +171,7 @@
 
 .g-a-contact p {
   text-align: center;
-  font-size: 20px;
+  // font-size: 20px;
   line-height: 0.5;
 }
 
@@ -239,7 +221,7 @@
 }
 
 .rating-card i {
-  font-size: 25px;
+  font-size: 1.25rem;
 }
 
 .comment-card {
@@ -254,4 +236,5 @@
 
 .card-table h1 {
   margin-bottom: 20px;
+  font-size: 2.5rem;
 }
