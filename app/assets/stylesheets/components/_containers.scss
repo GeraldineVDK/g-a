@@ -139,3 +139,41 @@
 #services h1 {
   font-size: 4vw;
 }
+
+// GRID AREA and IT'S ELEMENTS //
+.cards {
+  display: grid;
+  grid-template-areas: "a b c d";
+  grid-template-columns: repeat(4, 1fr);
+}
+
+// RESPONSIVE //
+@media (max-width: 768px) {
+  .cards {
+    grid-template-areas: "a" "d" "b" "c";
+    grid-template-columns: 1fr;
+  }
+}
+
+// GRID AREAS //
+#service-1 {
+  grid-area: a;
+  justify-self: center;
+}
+
+#service-2 {
+  grid-area: b;
+  justify-self: center;
+}
+
+#service-3{
+  grid-area: c;
+  justify-self: center;
+}
+
+#service-4 {
+  grid-area: d;
+  justify-self: center;
+}
+
+

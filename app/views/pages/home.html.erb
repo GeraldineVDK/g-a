@@ -36,63 +36,65 @@
     </div>
     <div class="container-services" id="services">
       <h1>Services Proposés</h1>
-      <div class="container-listofservices d-flex align-items-center">
-        <div class="card-service">
-          <div class="card-service-inner">
-            <div class="card-service-front">
-              <%= image_tag "bureaux.jpg" %>
-              <h3>Bureaux & Locaux Professionnels</h3>
-            </div>
-            <div class="card-service-back">
-              <div class="service-details">
-                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+      <div class="container-listofservices d-flex flex-grow justify-content-center align-items-center">
+        <div class="cards">
+          <div class="card-service" id="service-1">
+            <div class="card-service-inner">
+              <div class="card-service-front">
+                <%= image_tag "bureaux.jpg" %>
                 <h3>Bureaux & Locaux Professionnels</h3>
-                <p>G&A vous propose un nettoyage régulier ou ponctuel d’espace de travail. Presentez-nous vos besoins et nous pourrons définir ensemble un service à la carte qui convient le mieux à votre activité professionnelle.</p>
+              </div>
+              <div class="card-service-back">
+                <div class="service-details">
+                  <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                  <h3>Bureaux & Locaux Professionnels</h3>
+                  <p>G&A vous propose un nettoyage régulier ou ponctuel d’espace de travail. Presentez-nous vos besoins et nous pourrons définir ensemble un service à la carte qui convient le mieux à votre activité professionnelle.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-service-inner">
-            <div class="card-service-front">
-              <%= image_tag "copropriétés.jpg" %>
-              <h3>Copropriétés & Espaces Communs</h3>
-            </div>
-            <div class="card-service-back">
-              <div class="service-details">
-                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+          <div class="card-service" id="service-2">
+            <div class="card-service-inner">
+              <div class="card-service-front">
+                <%= image_tag "copropriétés.jpg" %>
                 <h3>Copropriétés & Espaces Communs</h3>
-                <p>G&A vous propose un service discret, rapide et efficace pour vous aider à entretenir copropriétés et espaces communs d'immeubles de logement.</p>
+              </div>
+              <div class="card-service-back">
+                <div class="service-details">
+                  <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                  <h3>Copropriétés & Espaces Communs</h3>
+                  <p>G&A vous propose un service discret, rapide et efficace pour vous aider à entretenir copropriétés et espaces communs d'immeubles de logement.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-service-inner">
-            <div class="card-service-front">
-              <%= image_tag "wall-painting.jpg" %>
-              <h3>Interventions Spécialisées</h3>
-            </div>
-            <div class="card-service-back">
-              <div class="service-details">
-                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+          <div class="card-service" id="service-3">
+            <div class="card-service-inner">
+              <div class="card-service-front">
+                <%= image_tag "wall-painting.jpg" %>
                 <h3>Interventions Spécialisées</h3>
-                <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en état? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
+              </div>
+              <div class="card-service-back">
+                <div class="service-details">
+                  <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                  <h3>Interventions Spécialisées</h3>
+                  <p>Des travaux ont lieu dans vos bureaux et vous souhaitez un nettoyage professionnel pour remettre le tout en état? Besoin d'un petit raffraichissement de vos espaces communs? D'autres besoins? Parlez-nous en, et nous apporterons une solution à votre demande...</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-service-inner">
-            <div class="card-service-front">
-              <%= image_tag "entretien_espaces_verts.jpg"%>
-              <h3>Entretien Espaces Verts</h3>
-            </div>
-            <div class="card-service-back">
-              <div class="service-details">
-                <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+          <div class="card-service" id="service-4">
+            <div class="card-service-inner">
+              <div class="card-service-front">
+                <%= image_tag "entretien_espaces_verts.jpg"%>
                 <h3>Entretien Espaces Verts</h3>
-                <p>Vous souhaitez entretenir un espace vert dans votre copropriété ou lieu de travail, mais n'avez pas le temps ou le materiel adéquat? G&A peut s'en charger!</p>
+              </div>
+              <div class="card-service-back">
+                <div class="service-details">
+                  <%= link_to "Devis Gatuit", devis_path, id: "btn-ghost-card" %>
+                  <h3>Entretien Espaces Verts</h3>
+                  <p>Vous souhaitez entretenir un espace vert dans votre copropriété ou lieu de travail, mais n'avez pas le temps ou le materiel adéquat? G&A peut s'en charger!</p>
+                </div>
               </div>
             </div>
           </div>

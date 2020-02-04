@@ -4,20 +4,24 @@
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
   // border: 2px solid blue;
   margin: 1vh 0.5vw;
-  width: 25vw;
+  width: 22vw;
+  min-width: 400px;
   height: 54vh;
   padding-left: 0;
+  // position: relative;
 }
 
 .card-service-front > img {
   height: 48vh;
   width: 25vw;
+    min-width: 400px;
   object-fit: cover;
 }
 
 .card-service h3 {
   margin-top: 1vh;
   background-color: transparent;
+  // position: absolute;
   // min-width: 300px;
 }
 
@@ -56,6 +60,7 @@
 
 .card-service-front h3 {
   font-size: 1.5vw;
+  align-items: center;
 }
 
 .card-service-back {
