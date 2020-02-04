@@ -8,12 +8,12 @@
   min-width: 400px;
   height: 54vh;
   padding-left: 0;
-  // position: relative;
+  position: relative;
 }
 
 .card-service-front > img {
   height: 48vh;
-  width: 25vw;
+  width: 100%;
     min-width: 400px;
   object-fit: cover;
 }
@@ -34,7 +34,7 @@
 ////FLIP CARDS////
 
 .card-service-inner {
-  position: relative;
+  // position: relative;
   height: 54vh;
   text-align: center;
   transition: transform 0.6s;
@@ -55,12 +55,16 @@
 
 .card-service-front {
   background: transparent;
+  width: 100%;
   // width: 25vw;
 }
 
 .card-service-front h3 {
   font-size: 1.5vw;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  // width: 25vw;
 }
 
 .card-service-back {
@@ -79,6 +83,7 @@
     padding: 2vh 2vw;
     font-size: 1.1vw;
   color: #f5e1da;
+  height: 100%;
 }
 
 .card-service .card-service-inner .card-service-back .service-details {
