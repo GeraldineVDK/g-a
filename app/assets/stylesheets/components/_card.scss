@@ -4,20 +4,25 @@
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
   // border: 2px solid blue;
   margin: 1vh 0.5vw;
-  width: 25vw;
+  width: 22vw;
+  min-width: 400px;
   height: 54vh;
   padding-left: 0;
+  position: relative;
 }
 
 .card-service-front > img {
   height: 48vh;
-  width: 25vw;
+  width: 100%;
+    min-width: 400px;
   object-fit: cover;
 }
 
 .card-service h3 {
   margin-top: 1vh;
   background-color: transparent;
+  // position: absolute;
+  // min-width: 300px;
 }
 
 .service-details {
@@ -29,7 +34,7 @@
 ////FLIP CARDS////
 
 .card-service-inner {
-  position: relative;
+  // position: relative;
   height: 54vh;
   text-align: center;
   transition: transform 0.6s;
@@ -50,11 +55,16 @@
 
 .card-service-front {
   background: transparent;
+  width: 100%;
   // width: 25vw;
 }
 
 .card-service-front h3 {
   font-size: 1.5vw;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  // width: 25vw;
 }
 
 .card-service-back {
@@ -73,6 +83,7 @@
     padding: 2vh 2vw;
     font-size: 1.1vw;
   color: #f5e1da;
+  height: 100%;
 }
 
 .card-service .card-service-inner .card-service-back .service-details {
@@ -139,10 +150,10 @@
 }
 
 .g-a-contact {
-  width: 40vw;
+  // width: 30vw;
   // border: 2px solid green;
   // padding: 2vh 2vw;
-  margin: 2vh 0vw 2vh 4vw ;
+  margin: 2vh 0vw 2vh 2vw;
   height: 35vh;
   background-color: #176764;
   color: #f5e1da;
@@ -153,6 +164,7 @@
   display: flex;
   flex-direction: column;
   justify: center;
+  text-decoration: none;
 }
 
 .g-a-contact h2 {
@@ -201,6 +213,7 @@
 
 .top-card h2 {
   padding-left: 2vw;
+    font-size: 1.5vw;
 }
 
 .rating-card {
