@@ -60,7 +60,7 @@
 }
 
 .card-service-front h3 {
-  font-size: 1.5vw;
+  font-size: calc(18px + 0.5vw);
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -76,14 +76,14 @@
 
 .card-service-back h3 {
   margin-top: 7vh;
-  font-size: 2vw;
-    padding: 2vh 2vw;
+  font-size: calc(18px + 0.5vw);
+  padding: 2vh 2vw;
 }
 .card-service-back p {
     padding: 2vh 2vw;
-    font-size: 1.1vw;
   color: #f5e1da;
   height: 100%;
+  font-size: calc(12px + 0.5vw);
 }
 
 .card-service .card-service-inner .card-service-back .service-details {
@@ -140,7 +140,7 @@
 
 .card-form-user h2 {
   // margin-top:20px;
-  font-size: 3vw;
+  font-size: calc(18px + 0.5vw);
 }
 
 .card-info-prestations {
@@ -153,7 +153,7 @@
   // width: 30vw;
   // border: 2px solid green;
   // padding: 2vh 2vw;
-  margin: 2vh 0vw 2vh 2vw;
+  margin: 2vh 0vw 2vh 0vw;
   height: 35vh;
   background-color: #176764;
   color: #f5e1da;
@@ -167,7 +167,7 @@
   text-decoration: none;
 }
 
-.g-a-contact h2 {
+.g-a-contact h5 {
   text-align: center;
   color: #f5e1da;
   margin-top: 10vh;
@@ -190,15 +190,16 @@
 
 
 .card-form cite {
-  font-size: 1vw;
+  // font-size: 1vw;
   padding: 2vh 2vw;
 }
 
 .card-input {
   width: 60vw;
+  min-width: 250px;
   display: flex;
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
-  margin: 4vh auto;
+  margin: 3vh auto;
   flex-direction: column;
 }
 
@@ -213,7 +214,7 @@
 
 .top-card h2 {
   padding-left: 2vw;
-    font-size: 1.5vw;
+      font-size: calc(18px + 0.5vw);
 }
 
 .rating-card {
@@ -240,5 +241,5 @@
 
 .card-table h1 {
   margin-bottom: 2vh;
-  font-size: 3vw;
+    font-size: calc(20px + 0.5vw);
 }
