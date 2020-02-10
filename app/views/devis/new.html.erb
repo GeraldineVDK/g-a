@@ -4,7 +4,7 @@
   <div class="card-form">
     <h1>Demande de Devis</h1>
     <div class="card-inner">
-      <div class="form d-flex col-6">
+      <div class="form d-flex justify-content-center align-items-center  col-12 col-md-6">
         <%= simple_form_for Devi.new do |f| %>
           <div class="card-info-prestations">
             Prénom*:<br>
@@ -46,7 +46,7 @@
           </div>
         <% end %>
       </div>
-      <div class="g-a-contact col-6", id="biz-card">
+      <div class="g-a-contact col-12 col-md-6">
         <%= image_tag("logo_without_slogan.png", :alt => "logosample feed", class: "avatar-medium") %>
         <h4><strong>Cleaning Pro Services</strong></h4>
         <p>Nr de TVA: 0717771789</p>

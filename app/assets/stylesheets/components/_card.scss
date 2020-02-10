@@ -111,7 +111,6 @@
 }
 
 .card-form h1 {
-  // margin-top: 0px;
   margin-bottom: 2vh;
 }
 
@@ -139,7 +138,6 @@
 }
 
 .card-form-user h2 {
-  // margin-top:20px;
   font-size: calc(18px + 0.5vw);
 }
 
@@ -150,11 +148,10 @@
 }
 
 .g-a-contact {
-  // width: 30vw;
   // border: 2px solid green;
-  // padding: 2vh 2vw;
   margin: 2vh 0vw 2vh 0vw;
   height: 35vh;
+  width: 100%;
   background-color: #176764;
   color: #f5e1da;
   position: relative;
@@ -171,17 +168,22 @@
   text-align: center;
   color: #f5e1da;
   margin-top: 10vh;
+  width: 100%;
 }
 
 .g-a-contact p {
   text-align: center;
-  // font-size: 20px;
   line-height: 0.5;
+}
+
+@media only screen and (max-width: 760px) {
+  .g-a-contact {
+    display: none;
+  }
 }
 
 .card-inner {
   // border: 2px solid black;
-  // padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -190,13 +192,12 @@
 
 
 .card-form cite {
-  // font-size: 1vw;
   padding: 2vh 2vw;
 }
 
 .card-input {
-  width: 60vw;
-  min-width: 250px;
+  // width: 60vw;
+  // min-width: 250px;
   display: flex;
   box-shadow: 0 0 1.5vw rgba(0,0,0,0.2);
   margin: 3vh auto;
@@ -207,22 +208,20 @@
   display: flex;
   justify-content: space-between;
   // border: 2px solid green;
-  width: 60vw;
+  margin-top: 2vh;
+  width: 100%;
   background-color: rgba(23,103,100,0.1);
   height: 6vh;
 }
 
 .top-card h2 {
-  padding-left: 2vw;
-      font-size: calc(18px + 0.5vw);
+  padding-left: 1vw;
+  font-size: calc(18px + 0.5vw);
 }
 
 .rating-card {
-  // display:flex;
   // border: 2px solid blue;
   padding-right: 2vw;
-  // padding-top: 30px;
-
 }
 
 .rating-card i {
@@ -232,7 +231,6 @@
 .comment-card {
   // border: 2px solid orange;
   padding: 2vh 2vw;
-  // flex: grow;
 }
 
 .card-table {
