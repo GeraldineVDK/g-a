@@ -5,7 +5,7 @@
     <h1>Partager Votre Expérience</h1>
 
     <div class="card-inner">
-      <div class="form d-flex">
+      <div class="form d-flex justify-content-center align-items-center col-12 col-md-6">
         <%= simple_form_for(@review) do |f| %>
           <div class="card-info-prestations">
             Titre*:<br>
@@ -33,9 +33,9 @@
         <% end %>
 
       </div>
-      <div class="g-a-contact">
-        <%= image_tag("color-logo.png", :alt => "logosample feed", class: "avatar-medium") %>
-        <h2>G&A Cleaning Pro Services</h2>
+      <div class="g-a-contact col-12 col-md-6">
+        <%= image_tag("logo_without_slogan.png", :alt => "logosample feed", class: "avatar-medium") %>
+        <h4><strong>Cleaning Pro Services</strong></h4>
         <p>Nr de TVA: 0717771789</p>
         <p>55, Terkluizendreef</p>
         <p>1640 Sint-Genesius-Rode</p>
