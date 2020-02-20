@@ -2,7 +2,7 @@
   <%= render 'shared/navbar' %>
   <div class="card-form">
     <h1>Demande de Contact nr. <%= @contact.id %></h1>
-    <div class="card-inner">
+    <div class="card-inner d-flex justify-content-center align-items-center">
       <div class="form d-flex">
         <%= simple_form_for(@contact) do |f| %>
             <div class="card-info-prestations">
