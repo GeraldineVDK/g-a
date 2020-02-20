@@ -11,9 +11,12 @@ class DevisController < ApplicationController
 
   def create     # POST /devis
     @devi = Devi.new(devi_params)
-    @devi.save
-    set_status
-    redirect_to root_path
+    @devi.status = "Pending"
+    if @devi.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -40,10 +43,5 @@ class DevisController < ApplicationController
 
   def devi_params
     params.require(:devi).permit(:first_name, :last_name, :telephone, :email, :building_address, :nr_de_passages, :nr_d_heures, :cahier_de_charges, :service_demande, :date_rdv, :date_debut_souhaitee, :status)
-  end
-
-  def set_status
-    @devi.status = "Pending"
-    @devi.save
   end
 end

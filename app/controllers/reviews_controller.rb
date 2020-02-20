@@ -11,9 +11,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.save
-    set_status
-    redirect_to root_path
+    @review.status = "Pending"
+    if @review.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -40,10 +43,5 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:title, :rating, :content, :role, :writer, :status)
-  end
-
-    def set_status
-    @review.status = "Pending"
-    @review.save
   end
 end

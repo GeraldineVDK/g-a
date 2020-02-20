@@ -11,9 +11,13 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
-    set_status
-    redirect_to root_path
+    @contact.status = "Pending"
+    if @contact.save
+      # @contact.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -40,10 +44,5 @@ class ContactsController < ApplicationController
 
   def contact_params
     params.require(:contact).permit(:nom, :prenom, :phone, :email, :service, :additional_info, :status)
-  end
-
-  def set_status
-    @contact.status = "Pending"
-    @contact.save
   end
 end

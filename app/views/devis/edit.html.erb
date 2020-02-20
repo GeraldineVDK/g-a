@@ -1,57 +1,55 @@
-<div class="container-all-dashboard" id="id-container-all">
+<div class="container-all" id="id-container-all">
   <%= render 'shared/navbar' %>
-  <div class="container-index-dashboard">
-    <div class="card-form">
-      <h1>Devi nr. <%= @devi.id %></h1>
-      <%= simple_form_for(@devi) do |f| %>
+
+  <div class="card-form">
+    <h1>Demande de Devis</h1>
+    <div class="card-inner">
+      <div class="form d-flex justify-content-center align-items-center  col-12 col-md-6">
+        <%= simple_form_for(@devi) do |f| %>
           <div class="card-info-prestations">
-            Prénom:<br>
-            <%= f.input :first_name, label: false %>
+            Prénom*:<br>
+            <%= f.input :first_name, label: 'Prénom', label: false, error: 'Champ obligatoire' %>
           </div>
           <div class="card-info-prestations">
-            Nom:<br>
-            <%= f.input :last_name, label: false  %>
+            Nom*:<br>
+            <%= f.input :last_name, label: 'Nom', label: false, error: 'Champ obligatoire'  %>
           </div>
           <div class="card-info-prestations">
-            Téléphone:<br>
-            <%= f.input :telephone, label: false  %>
+            Téléphone*:<br>
+            <%= f.input :telephone, label: 'Téléphone', label: false, error: 'Champ obligatoire'  %>
           </div>
           <div class="card-info-prestations">
-            Email:<br>
-            <%= f.input :email, label: false  %>
+            Email*:<br>
+            <%= f.input :email, label: 'Email', label: false, error: 'Champ obligatoire'  %>
           </div>
           <div class="card-info-prestations">
-            Service sélectionné<br>
-            <%= f.input :service_demande, label: false, collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %>
+            Service sélectionné*<br>
+            <%= f.input :service_demande, label: 'Service sélectionné', label: false, error: 'Champ obligatoire', collection: ["Bureaux & Locaux Professionnels", "Copropriétés & Espaces Communs", "Interventions Spécialisées", "Entretien Espaces Verts"]  %>
           </div>
           <div class="card-info-prestations">
             Addresse de la prestation:<br>
-            <%= f.input :building_address, label: false  %>
+            <%= f.input :building_address, label: 'Addresse de la prestation', label: false%>
           </div>
           <div class="card-info-prestations">
-            Nombre de passage par semaine?<br>
-            <%= f.input :nr_de_passages, label: false , collection: 1..5   %>
+            Nombre d'heures souhaitées par semaine?<br>
+            <%= f.input :nr_d_heures, label: "Nombre d'heures souhaitées par semaine?", label: false, collection: 1..20   %>
           </div>
           <div class="card-info-prestations">
-            Nombre d'heures souhaitées par semaine?<br> <%= f.input :nr_d_heures, label: false , collection: 1..20   %>
-          </div>
-          <div class="card-info-prestations">
-            <%= f.input :cahier_de_charges, label: false , as: :radio_buttons  %>
+            <%= f.input :cahier_de_charges, label: 'Avez-vous un cahier des charges?', label: false, as: :radio_buttons  %>
           </div>
           <div class="card-info-prestations">
             Date souhaitée pour le début du service?<br>
-            <%= f.input :date_debut_souhaitee, label: false %>
+            <%= f.input :date_debut_souhaitee, label: 'Date souhaitée pour le début du service?', label: false%>
+          </div>
+          Status<br>
+            <%= f.input :status, label: 'Etat', label: false, collection: ["Done", "Pending", "Closed"]%>
           </div>
           <div class="card-info-prestations">
-            Statut<br>
-            <%= f.input :status, label: false , collection: ["Done", "Pending", "Closed"]%>
-          </div>
-          <div class="card-info-prestations">
-            <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
-            <% end %>
+            <%= f.button :submit, 'Soumettre la demande', id: "btn-ghost-form"%>
           </div>
         <% end %>
-    </div>
+      </div>
+     </div>
   <%= render 'shared/footer' %>
 </div>
 

@@ -29,7 +29,7 @@
               Informations complémentaires:<br>
               <%= f.input :additional_info, label: 'Info complémentaires', label: false, as: :text%>
             </div>
-          <%= f.button :submit, 'Envoi du Formulaire', id: "btn-ghost-form", data: { confirm: "Merci!" }%>
+          <%= f.button :submit, 'Envoi du Formulaire', id: "btn-ghost-form"%>
         <% end %>
       </div>
       <div class="g-a-contact col-12 col-md-6">
@@ -42,7 +42,6 @@
         <p>info@gacleaningproservices.com</p>
       </div>
     </div>
-    <cite>* Champs obligatoires. Si ces informations ne sont pas complétées, le formulaire ne sera pas soumis. Merci de votre compréhension.</cite>
   </div>
   <%= render 'shared/footer' %>
 </div>
