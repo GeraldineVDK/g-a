@@ -1,37 +1,45 @@
-<div class="container-all-dashboard" id="id-container-all">
+<div class="container-all" id="id-container-all">
   <%= render 'shared/navbar' %>
-  <div class="container-index-dashboard">
-    <div class="card-form">
-      <h1>Devi nr. <%= @review.id %></h1>
-      <%= simple_form_for(@review) do |f| %>
+  <div class="container-index-dashboard ">
+  <div class="card-form">
+    <h1>Partager Votre Expérience</h1>
+
+    <div class="card-inner">
+      <div class="form d-flex justify-content-center align-items-center col-12 col-md-6">
+        <%= simple_form_for(@review) do |f| %>
           <div class="card-info-prestations">
-            Evaluation:<br>
-            <%= f.input :rating, label: false, inclusion: { in: (1..5)} %>
+            Titre*:<br>
+            <%= f.input :title, label: 'Titre du commentaire', label: false, error: 'Champ obligatoire, merci de compléter' %>
           </div>
           <div class="card-info-prestations">
-            Contenu:<br>
-            <%= f.input :content, label: false  %>
+            Evaluation*:<br>
+            <%= f.input :rating, label: 'Evaluation', label: false, error: 'Champ obligatoire, merci de compléter', collection: (1..5)  %>
           </div>
           <div class="card-info-prestations">
-            Référence:<br>
-            <%= f.input :writer, label: false  %>
+            Contenu*:<br>
+            <%= f.input :content, label: 'Contenu', label: false, error: 'Champ obligatoire, merci de compléter'  %>
           </div>
           <div class="card-info-prestations">
-            Role:<br>
-            <%= f.input :role, label: false  %>
+            Référence*:<br>
+            <%= f.input :writer, label: 'Référence', label: false, error: 'Champ obligatoire, merci de compléter'  %>
           </div>
           <div class="card-info-prestations">
-            Statut<br>
-            <%= f.input :status, label: false, collection: ["Lu", "Pending", "Action à prendre"]  %>
+            A bénéficié du service en tant que<br>
+            <%= f.input :role, label: 'A bénéficier du service en tant que', label: false%>
           </div>
+           Status<br>
+            <%= f.input :status, label: 'Etat', label: false, collection: ["Done", "Pending", "Closed"]%>
+          </div>
+
           <div class="card-info-prestations">
-            <%= f.button :submit, 'Mettre à jour', method: :patch, id: "btn-ghost-form", data: { confirm: "Est-vous sûr?" } do %>
-            <% end %>
+            <%= f.button :submit, 'Soumettre le commentaire', id: "btn-ghost-form"%>
           </div>
         <% end %>
+
+      </div>
     </div>
+  </div>
   </div>
   <%= render 'shared/footer' %>
 </div>
-
 
